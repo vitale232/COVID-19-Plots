@@ -12,12 +12,12 @@ There is a distinction in these figures between "Total Cases" and "New Cases". *
 
 ## Total Cases
 
-![Total Cases of COVID-19 in select US States](./output/usa_hot_spots.png?raw=true "Total Cases of COVID-19 in select US States")
+![Total Cases of COVID-19 in select US States](./output/PNGs/usa_hot_spots.png?raw=true "Total Cases of COVID-19 in select US States")
 
-![Total confirmed, recovered, and fatal cases of COVID-19 in the USA](./output/usa_hot_spots.png?raw=true "Total confirmed, recovered, and fatal cases of COVID-19 in the USA")
+![Total confirmed, recovered, and fatal cases of COVID-19 in the USA](./output/PNGs/usa_hot_spots.png?raw=true "Total confirmed, recovered, and fatal cases of COVID-19 in the USA")
 
 ## New Cases
 
-![New cases of COVID-19 in select countries](./output/countries_new_cases.png?raw=true "New cases of COVID-19 in select countries")
+![New cases of COVID-19 in select countries](./output/PNGs/countries_new_cases.png?raw=true "New cases of COVID-19 in select countries")
 
-![New cases of COVID-19 in select US States](./output/states_new_cases.png?raw=true "New cases of COVID-19 in select US States")
+![New cases of COVID-19 in select US States](./output/PNGs/states_new_cases.png?raw=true "New cases of COVID-19 in select US States")
