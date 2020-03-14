@@ -1,6 +1,6 @@
 # About
 
-This repo is just some quick plots I threw together regarding [COVID-19](https://www.health.ny.gov/diseases/communicable/coronavirus/).
+This repo is just some quick plots I threw together regarding [COVID-19](https://www.health.ny.gov/diseases/communicable/coronavirus/), which is commonly referred to as Coronavirus in the USA.
 
 The true heroes here are the fine folks at Johns Hopkins that have an awesome [dashboard](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6) and a [GitHub Repo](https://github.com/CSSEGISandData/COVID-19) of all their data.
 
