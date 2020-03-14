@@ -13,7 +13,7 @@ from abbreviations import state_abbreviations
 
 plot_states = ['Washington', 'New York', 'California', 'Massachusetts', 'Florida']
 plot_countries = ['USA', 'France', 'Germany', 'Canada', 'South Korea', 'Italy']
-countries_start_date = date(2020, 2, 17)
+countries_start_date = date(2020, 2, 19)
 daily_reports_dir = r'C:\Users\andrew\Documents\covid19\data\COVID-19\csse_covid_19_data\csse_covid_19_daily_reports'
 output_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\usa.csv'
 save_figure = True
