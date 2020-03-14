@@ -327,7 +327,7 @@ countries_new_cases_csv = os.path.join(
 countries_new_cases.to_csv(countries_new_cases_csv)
 
 countries_new_cases = countries_new_cases[['NewCases']]
-countries_new_cases_fig, countries_new_cases_ax = plt.subplots(figsize=(13, 8))
+countries_new_cases_fig, countries_new_cases_ax = plt.subplots(figsize=(13, 6))
 countries_new_cases.unstack().plot(
     ax=countries_new_cases_ax,
     title='New COVID-19 Cases in Select Countries',
