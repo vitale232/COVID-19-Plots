@@ -36,22 +36,22 @@ cummulative_output_csv = os.path.join(
     csv_dir,
     os.path.basename(output_csv).replace('.csv', '_cases.csv')
 )
+
+# Loop through the CSV directory and grab each CSV with a date
 date_regex = re.compile(r'^\d{2}-\d{2}-\d{4}.csv$')
 daily_csvs = os.listdir(daily_reports_dir)
 countries = pd.DataFrame([[]])
-# usa = pd.DataFrame([[]])
-# china = pd.DataFrame([[]])
-# germany = pd.DataFrame([[]])
-# france = pd.DataFrame([[]])
 for csv in daily_csvs:
     if not date_regex.match(csv):
         print(f'Skipping {csv}')
         continue
     print(f'Processing {csv}')
     
+    # Subset the countries of potential interest. Likely to change
     df = pd.read_csv(os.path.join(daily_reports_dir, csv))
     daily_countries = df.loc[df['Country/Region'].isin([
-        'US', 'China', 'Mainland China', 'Germany', 'France', 'Italy', 'Canada', 'South Korea'
+        'US', 'China', 'Mainland China', 'Germany',
+        'France', 'Italy', 'Canada', 'South Korea'
     ])].copy()
     cases_date = datetime.strptime(csv.replace('.csv', ''), r'%m-%d-%Y').date()
     daily_countries['Date'] = cases_date
@@ -68,6 +68,7 @@ south_korea = countries.loc[countries['Country/Region'] == 'South Korea']
 
 usa.to_csv(output_csv)
 
+# Examine the US cases. Zero start out to appease Jamie
 zero_start = pd.DataFrame(
     [
         [datetime(2020, 1, 10).date(), 0, 0, 0],
@@ -95,14 +96,10 @@ if save_figure:
 if show_figure:
     plt.show()
 
-# usa_by_state = usa[['Date', 'Confirmed', 'Province/State']]
-# print(usa_by_state.groupby(['Date', 'Province/State']).head(20))
-# x = usa_by_state.groupby(['Date','Province/State']).count()['Confirmed'].unstack()
-# print(x.head(20))
-# print(x.tail(20))
-# x.plot()
-# plt.show()
 
+# Select out all of the US states. Province/Region is formatted all kinds of ways,
+# so try to get the State Name or SN abbreviation, and transform it to a State Name
+## Plot 5 hottest US states as of today
 usa_by_state = usa.copy()
 split_state = usa['Province/State'].str.split(', ', expand=True).values.tolist()
 
@@ -129,9 +126,6 @@ for row in split_state:
 usa_by_state['State'] = state
 usa_by_state.dropna(inplace=True)
 
-# state_cases_group = usa_by_state[['Date', 'Confirmed', 'Deaths', 'Recovered', 'State']].groupby(['Date', 'State']).sum()
-# state_cases.set_index('Date', inplace=True)
-# hot_spots = usa_by_state.loc[usa_by_state['State'].isin(['New York', 'Washington']), ['Date', 'Confirmed', 'Deaths', 'Recovered', 'State']].groupby(['Date', 'State']).sum()
 state_cases_group = usa_by_state[
     ['Date', 'Confirmed', 'Recovered', 'Deaths', 'State']
 ].groupby(['Date', 'State']).sum()
@@ -142,9 +136,6 @@ state_cases.to_csv(os.path.join(
     'usa_state_cases.csv'
 ))
 
-# hot_spots = state_cases.loc[
-#     state_cases['State'].isin(plot_states), ['Date', 'Confirmed', 'Recovered', 'State']
-# ].groupby(['Date', 'State']).sum()
 hot_spots = state_cases.loc[
     state_cases['State'].isin(plot_states), ['Date', 'Confirmed', 'State']
 ].groupby(['Date', 'State']).sum()
@@ -154,7 +145,6 @@ state_cases.to_csv(os.path.join(
 ))
 
 fig2, hotspot_ax2 = plt.subplots(figsize=(13, 6))
-# state_cases.groupby(['date','type']).count()['amount'].unstack().plot(ax=ax)
 hot_spots.unstack().plot(ax=hotspot_ax2, title='COVID-19 in Select US States', lw=2)
 hotspot_ax2.set_xlabel('Date')
 hotspot_ax2.set_ylabel('Number of Cases')
@@ -240,7 +230,8 @@ if save_figure:
     usa_new_cases_fig = usa_new_cases_ax.get_figure()
     usa_new_cases_fig.savefig(usa_new_cases_png)
 
-# China
+# China/US new cases. China is a few orders of magnitude higher (or reported as such),
+# so this graphs not super useful unless you can interact via matplotlib
 china_new_cases = china[['Date', 'Confirmed', 'Recovered', 'Deaths']].groupby('Date').sum()
 china_new_cases['NewCases'] = china_new_cases.Confirmed.diff()
 
@@ -279,7 +270,7 @@ if save_figure:
     usa_china_new_cases_fig.savefig(usa_china_new_cases_png)
 
 
-# France, Germany, USA
+# Compare the new cases for the countries idenfied in `plot_countries`
 france_new_cases = france[['Date', 'Confirmed', 'Recovered', 'Deaths']].groupby('Date').sum()
 france_new_cases['NewCases'] = france_new_cases.Confirmed.diff()
 
