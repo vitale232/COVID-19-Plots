@@ -34,3 +34,4 @@ There is a distinction in these figures between "Total Cases" and "New Cases". *
 
 ![New cases of COVID-19 in select US States](./output/PNGs/states_new_cases.png?raw=true "New cases of COVID-19 in select US States")
 
+![New cases of COVID-19 in China and the USA](./output/PNGs/usa_china_new_cases.png?raw=true "New cases of COVID-19 in China and the USA")
