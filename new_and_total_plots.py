@@ -7,25 +7,27 @@ plt.rcParams.update({'font.size': 14})
 plt.style.use('dark_background')
 
 
-# usa_new_cases_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\usa_new_cases.csv'
 raw_usa_states_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\usa.csv'
 world_new_cases_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\countries_new_cases.csv'
 show_figure = False
 save_figure = True
 start_date = date(2020, 1, 22)
 
+# Prepare US cases from state data
 raw_states = pd.read_csv(raw_usa_states_csv)
 raw_states = raw_states.loc[~raw_states['Province/State'].str.contains('Princess')]
 
 usa_new_cases = raw_states[
     ['Date', 'Confirmed', 'Recovered', 'Deaths']
 ].groupby('Date').sum()
+
 usa_new_cases['NewCases'] = usa_new_cases.Confirmed.diff()
 
-usa_new_cases['Date'] = pd.to_datetime(usa_new_cases.Date, format=r'%Y-%m-%d')
-# usa_new_cases = usa_new_cases.set_index('Date')
+usa_new_cases = usa_new_cases.reset_index()
+usa_new_cases['Date'] = pd.to_datetime(usa_new_cases.Date)
 
-fig1, ax1 = plt.subplots(figsize=(13, 6))
+# USA Cases
+fig1, ax1 = plt.subplots(figsize=(13, 7))
 bar_container = ax1.bar(usa_new_cases.Date, usa_new_cases.NewCases, color='#feffb3')
 line = ax1.plot(usa_new_cases.Date, usa_new_cases.Confirmed, color='#fa8174')
 ax1.legend(
@@ -50,6 +52,7 @@ if save_figure:
     fig1.savefig(png_path)
 
 
+# Italy cases
 world_new_cases = pd.read_csv(world_new_cases_csv)
 world_new_cases['Date'] = pd.to_datetime(world_new_cases.Date, format=r'%Y-%m-%d')
 
@@ -64,7 +67,7 @@ italy = pd.concat([
 italy['Date'] = pd.to_datetime(italy.Date)
 italy = italy.sort_values(by='Date')
 
-fig2, ax2 = plt.subplots(figsize=(13, 6))
+fig2, ax2 = plt.subplots(figsize=(13, 7))
 italy_bar_container = ax2.bar(italy.Date, italy.NewCases, color='#feffb3')
 italy_line = ax2.plot(italy.Date, italy.Confirmed, color='#fa8174')
 ax2.legend(
@@ -90,7 +93,7 @@ if save_figure:
 
 
 ## Italy and US on same plot
-fig3, ax3 = plt.subplots(figsize=(13, 6))
+fig3, ax3 = plt.subplots(figsize=(13, 7))
 italy_bars = ax3.bar(italy.Date, italy.NewCases, color='#fa8174')
 italy_lines = ax3.plot(italy.Date, italy.Confirmed, color='#fa8174')
 
