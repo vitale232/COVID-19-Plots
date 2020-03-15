@@ -116,7 +116,7 @@ for row in split_state:
             state.append(state_abbreviations[row[1]])
         except Exception as exc:
             try:
-                if not re.search(r'princess', row[1]) in row[1]:
+                if not re.search(r'princess', row[1]):
                     state.append('Diamond Princess')
             except Exception as exc2:
                 print(f'EXCEPTION : {type(exc2).__name__} : ROW: {row}')

@@ -27,6 +27,20 @@ Date,State,Confirmed,Recovered,Deaths,NewCases
 2020-03-12,California,221.0,6.0,4.0,44.0
 2020-03-13,California,282.0,6.0,4.0,61.0
 2020-03-14,California,340.0,6.0,5.0,58.0
+2020-03-01,Diamond Princess,0.0,0.0,0.0,
+2020-03-02,Diamond Princess,0.0,0.0,0.0,0.0
+2020-03-03,Diamond Princess,0.0,0.0,0.0,0.0
+2020-03-04,Diamond Princess,0.0,0.0,0.0,0.0
+2020-03-05,Diamond Princess,0.0,0.0,0.0,0.0
+2020-03-06,Diamond Princess,0.0,0.0,0.0,0.0
+2020-03-07,Diamond Princess,0.0,0.0,0.0,0.0
+2020-03-08,Diamond Princess,0.0,0.0,0.0,0.0
+2020-03-09,Diamond Princess,0.0,0.0,0.0,0.0
+2020-03-10,Diamond Princess,46.0,0.0,0.0,46.0
+2020-03-11,Diamond Princess,46.0,0.0,0.0,0.0
+2020-03-12,Diamond Princess,46.0,0.0,0.0,0.0
+2020-03-13,Diamond Princess,46.0,0.0,0.0,0.0
+2020-03-14,Diamond Princess,47.0,0.0,0.0,1.0
 2020-03-01,Illinois,3.0,2.0,0.0,
 2020-03-02,Illinois,4.0,2.0,0.0,1.0
 2020-03-03,Illinois,4.0,2.0,0.0,0.0
@@ -394,11 +408,6 @@ Date,State,Confirmed,Recovered,Deaths,NewCases
 2020-03-12,Delaware,1.0,0.0,0.0,0.0
 2020-03-13,Delaware,4.0,0.0,0.0,3.0
 2020-03-14,Delaware,6.0,0.0,0.0,2.0
-2020-03-10,Diamond Princess,46.0,0.0,0.0,
-2020-03-11,Diamond Princess,46.0,0.0,0.0,0.0
-2020-03-12,Diamond Princess,46.0,0.0,0.0,0.0
-2020-03-13,Diamond Princess,46.0,0.0,0.0,0.0
-2020-03-14,Diamond Princess,46.0,0.0,0.0,0.0
 2020-03-10,Grand Princess,21.0,0.0,0.0,
 2020-03-11,Grand Princess,21.0,0.0,0.0,0.0
 2020-03-12,Grand Princess,21.0,0.0,0.0,0.0
