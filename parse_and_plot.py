@@ -80,7 +80,7 @@ usa_cases = usa[['Date', 'Confirmed', 'Deaths', 'Recovered']].groupby(['Date']).
 usa_cases.sort_index()
 usa_cases.to_csv(cummulative_output_csv)
 
-ax = usa_cases.plot(figsize=(13, 6), title='COVID-19 in the USA', lw=2)
+ax = usa_cases.plot(figsize=(13, 7), title='COVID-19 in the USA', lw=2)
 ax.set_xlabel('Date')
 ax.set_ylabel('Number of Cases')
 
@@ -125,6 +125,7 @@ for row in split_state:
 
 usa_by_state['State'] = state
 usa_by_state.dropna(inplace=True)
+usa_by_state = usa_by_state.loc[~usa_by_state['Province/State'].str.contains('Princess')]
 
 state_cases_group = usa_by_state[
     ['Date', 'Confirmed', 'Recovered', 'Deaths', 'State']
@@ -144,7 +145,7 @@ state_cases.to_csv(os.path.join(
     'usa_hot_spots.csv'
 ))
 
-fig2, hotspot_ax2 = plt.subplots(figsize=(13, 6))
+fig2, hotspot_ax2 = plt.subplots(figsize=(13, 7))
 hot_spots.unstack().plot(ax=hotspot_ax2, title='COVID-19 in Select US States', lw=2)
 hotspot_ax2.set_xlabel('Date')
 hotspot_ax2.set_ylabel('Number of Cases')
@@ -184,7 +185,7 @@ else:
     new_cases.loc[new_cases.State.isin(plot_states)].to_csv(new_cases_csv, index=False)
 
 new_cases = new_cases.loc[new_cases.State.isin(plot_states)].set_index(['Date', 'State'])[['NewCases']]
-new_cases_fig, new_cases_ax = plt.subplots(figsize=(13, 6))
+new_cases_fig, new_cases_ax = plt.subplots(figsize=(13, 7))
 new_cases.unstack().plot(ax=new_cases_ax, title='New COVID-19 Cases in Select States', lw=2)
 new_cases_ax.set_xlabel('Date')
 new_cases_ax.set_ylabel('Number of New Cases')
@@ -213,7 +214,7 @@ usa_new_cases_csv = os.path.join(
 usa_new_cases.to_csv(usa_new_cases_csv)
 
 usa_new_cases = usa_new_cases[['NewCases']]
-usa_new_cases_fig, usa_new_cases_ax = plt.subplots(figsize=(13, 6))
+usa_new_cases_fig, usa_new_cases_ax = plt.subplots(figsize=(13, 7))
 usa_new_cases.plot(ax=usa_new_cases_ax, title='New COVID-19 Cases in USA', lw=2, color='red')
 usa_new_cases_ax.set_xlabel('Date')
 usa_new_cases_ax.set_ylabel('Number of New Cases')
@@ -252,7 +253,7 @@ usa_china_new_cases_csv = os.path.join(
 usa_china_new_cases.to_csv(usa_china_new_cases_csv)
 
 usa_china_new_cases = usa_china_new_cases[['NewCases']]
-usa_china_new_cases_fig, usa_china_new_cases_ax = plt.subplots(figsize=(13, 6))
+usa_china_new_cases_fig, usa_china_new_cases_ax = plt.subplots(figsize=(13, 7))
 usa_china_new_cases.unstack().plot(ax=usa_china_new_cases_ax, title='New COVID-19 Cases in Select Countries', lw=2)
 usa_china_new_cases_ax.set_xlabel('Date')
 usa_china_new_cases_ax.set_ylabel('Number of New Cases')
@@ -318,7 +319,7 @@ countries_new_cases_csv = os.path.join(
 countries_new_cases.to_csv(countries_new_cases_csv)
 
 countries_new_cases = countries_new_cases[['NewCases']]
-countries_new_cases_fig, countries_new_cases_ax = plt.subplots(figsize=(13, 6))
+countries_new_cases_fig, countries_new_cases_ax = plt.subplots(figsize=(13, 7))
 countries_new_cases.unstack().plot(
     ax=countries_new_cases_ax,
     title='New COVID-19 Cases in Select Countries',
