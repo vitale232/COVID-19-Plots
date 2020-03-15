@@ -8,7 +8,7 @@ plt.style.use('dark_background')
 
 usa_new_cases_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\usa_new_cases.csv'
 world_new_cases_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\countries_new_cases.csv'
-show_figure = True
+show_figure = False
 save_figure = True
 
 usa_new_cases = pd.read_csv(usa_new_cases_csv)

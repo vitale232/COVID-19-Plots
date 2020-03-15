@@ -27,3 +27,4 @@ There is a distinction in these figures between "Total Cases" and "New Cases". *
 ![New cases of COVID-19 in select countries](./output/PNGs/countries_new_cases.png?raw=true "New cases of COVID-19 in select countries")
 
 ![New cases of COVID-19 in select US States](./output/PNGs/states_new_cases.png?raw=true "New cases of COVID-19 in select US States")
+
