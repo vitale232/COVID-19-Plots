@@ -67,4 +67,4 @@ if save_figure:
         'PNGs',
         'italy_new_and_confirmed.png'
     ))
-    fig1.savefig(png_path)
+    fig2.savefig(png_path)
