@@ -10,6 +10,10 @@ The figures below are generated in the `./parse_and_plot.py` file. Python was ma
 
 There is a distinction in these figures between "Total Cases" and "New Cases". **Total cases** is the total number of confirmed cases of COVID-19 for the reporting area as of a given date. The **new cases** are newly identified cases in the reporting area as of a given date.
 
+## New and Total Cases USA
+
+![Total New and Confirmed Cases of COVID-19 in USA](./output/PNGs/usa_new_and_confirmed.png?raw=true "Total New and Confirmed Cases of COVID-19 in USA")
+
 ## Total Cases
 
 ![Total Cases of COVID-19 in select US States](./output/PNGs/usa_hot_spots.png?raw=true "Total Cases of COVID-19 in select US States")
