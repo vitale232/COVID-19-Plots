@@ -101,7 +101,6 @@ if show_figure:
 ## Plot 5 hottest US states as of today
 usa_by_state = usa.copy()
 split_state = usa['Province/State'].str.split(', ', expand=True).values.tolist()
-
 state = []
 for row in split_state:
     if all(map(pd.isnull, row)):
@@ -116,8 +115,10 @@ for row in split_state:
             state.append(state_abbreviations[row[1]])
         except Exception as exc:
             try:
-                if not re.search(r'princess', row[1]):
+                if re.search(r'princess', row[1].lower()):
                     state.append('Diamond Princess')
+                else:
+                    state.append(None)
             except Exception as exc2:
                 print(f'EXCEPTION : {type(exc2).__name__} : ROW: {row}')
                 state.append(None)
