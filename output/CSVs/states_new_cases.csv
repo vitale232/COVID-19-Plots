@@ -27,20 +27,6 @@ Date,State,Confirmed,Recovered,Deaths,NewCases
 2020-03-12,California,221.0,6.0,4.0,44.0
 2020-03-13,California,282.0,6.0,4.0,61.0
 2020-03-14,California,340.0,6.0,5.0,58.0
-2020-03-01,Diamond Princess,0.0,0.0,0.0,
-2020-03-02,Diamond Princess,0.0,0.0,0.0,0.0
-2020-03-03,Diamond Princess,0.0,0.0,0.0,0.0
-2020-03-04,Diamond Princess,0.0,0.0,0.0,0.0
-2020-03-05,Diamond Princess,0.0,0.0,0.0,0.0
-2020-03-06,Diamond Princess,0.0,0.0,0.0,0.0
-2020-03-07,Diamond Princess,0.0,0.0,0.0,0.0
-2020-03-08,Diamond Princess,0.0,0.0,0.0,0.0
-2020-03-09,Diamond Princess,0.0,0.0,0.0,0.0
-2020-03-10,Diamond Princess,46.0,0.0,0.0,46.0
-2020-03-11,Diamond Princess,46.0,0.0,0.0,0.0
-2020-03-12,Diamond Princess,46.0,0.0,0.0,0.0
-2020-03-13,Diamond Princess,46.0,0.0,0.0,0.0
-2020-03-14,Diamond Princess,46.0,0.0,0.0,0.0
 2020-03-01,Illinois,3.0,2.0,0.0,
 2020-03-02,Illinois,4.0,2.0,0.0,1.0
 2020-03-03,Illinois,4.0,2.0,0.0,0.0
@@ -111,15 +97,6 @@ Date,State,Confirmed,Recovered,Deaths,NewCases
 2020-03-12,Texas,27.0,0.0,0.0,6.0
 2020-03-13,Texas,43.0,0.0,0.0,16.0
 2020-03-14,Texas,57.0,0.0,0.0,14.0
-2020-03-01,Unassigned Location (From Diamond Princess),44.0,0.0,0.0,
-2020-03-02,Unassigned Location (From Diamond Princess),45.0,0.0,0.0,1.0
-2020-03-03,Unassigned Location (From Diamond Princess),45.0,0.0,0.0,0.0
-2020-03-04,Unassigned Location (From Diamond Princess),45.0,0.0,0.0,0.0
-2020-03-05,Unassigned Location (From Diamond Princess),45.0,0.0,0.0,0.0
-2020-03-06,Unassigned Location (From Diamond Princess),45.0,0.0,0.0,0.0
-2020-03-07,Unassigned Location (From Diamond Princess),45.0,0.0,0.0,0.0
-2020-03-08,Unassigned Location (From Diamond Princess),45.0,0.0,0.0,0.0
-2020-03-09,Unassigned Location (From Diamond Princess),45.0,0.0,0.0,0.0
 2020-03-01,Washington,11.0,1.0,1.0,
 2020-03-02,Washington,18.0,1.0,6.0,7.0
 2020-03-03,Washington,27.0,1.0,7.0,9.0
@@ -312,9 +289,6 @@ Date,State,Confirmed,Recovered,Deaths,NewCases
 2020-03-12,Connecticut,5.0,0.0,0.0,2.0
 2020-03-13,Connecticut,11.0,0.0,0.0,6.0
 2020-03-14,Connecticut,22.0,0.0,0.0,11.0
-2020-03-07,Grand Princess Cruise Ship,21.0,0.0,0.0,
-2020-03-08,Grand Princess Cruise Ship,21.0,0.0,0.0,0.0
-2020-03-09,Grand Princess Cruise Ship,21.0,0.0,0.0,0.0
 2020-03-07,Hawaii,1.0,0.0,0.0,
 2020-03-08,Hawaii,1.0,0.0,0.0,0.0
 2020-03-09,Hawaii,2.0,0.0,0.0,1.0
@@ -408,11 +382,6 @@ Date,State,Confirmed,Recovered,Deaths,NewCases
 2020-03-12,Delaware,1.0,0.0,0.0,0.0
 2020-03-13,Delaware,4.0,0.0,0.0,3.0
 2020-03-14,Delaware,6.0,0.0,0.0,2.0
-2020-03-10,Grand Princess,21.0,0.0,0.0,
-2020-03-11,Grand Princess,21.0,0.0,0.0,0.0
-2020-03-12,Grand Princess,21.0,0.0,0.0,0.0
-2020-03-13,Grand Princess,21.0,0.0,0.0,0.0
-2020-03-14,Grand Princess,21.0,0.0,0.0,0.0
 2020-03-10,Idaho,0.0,0.0,0.0,
 2020-03-11,Idaho,0.0,0.0,0.0,0.0
 2020-03-12,Idaho,0.0,0.0,0.0,0.0
