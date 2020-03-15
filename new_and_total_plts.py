@@ -1,3 +1,4 @@
+from datetime import date
 import os
 
 import pandas as pd
@@ -10,6 +11,7 @@ usa_new_cases_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\usa_new_case
 world_new_cases_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\countries_new_cases.csv'
 show_figure = False
 save_figure = True
+start_date = date(2020, 1, 22)
 
 usa_new_cases = pd.read_csv(usa_new_cases_csv)
 usa_new_cases['Date'] = pd.to_datetime(usa_new_cases.Date, format=r'%Y-%m-%d')
@@ -44,6 +46,15 @@ world_new_cases = pd.read_csv(world_new_cases_csv)
 world_new_cases['Date'] = pd.to_datetime(world_new_cases.Date, format=r'%Y-%m-%d')
 
 italy = world_new_cases.loc[world_new_cases['Country'] == 'Italy']
+italy = pd.concat([
+    italy,
+    pd.DataFrame([[
+        start_date, 'Italy', 0, 0, 0, 0
+    ]],
+    columns=['Date', 'Country', 'Confirmed', 'Deaths', 'NewCases', 'Recovered'])
+])
+italy['Date'] = pd.to_datetime(italy.Date)
+italy = italy.sort_values(by='Date')
 
 fig2, ax2 = plt.subplots(figsize=(13, 6))
 italy_bar_container = ax2.bar(italy.Date, italy.NewCases, color='#feffb3')
