@@ -12,8 +12,14 @@ There is a distinction in these figures between "Total Cases" and "New Cases". *
 
 ## New and Total Cases USA and Italy
 
+### USA and Italy
+
+![Total New and Confirmed Cases of COVID-19 in the USA and Italy](./output/PNGs/italy_new_and_confirmed.png?raw=true "Total New and Confirmed Cases of COVID-19 in the USA and Italy")
+
+### USA
 ![Total New and Confirmed Cases of COVID-19 in USA](./output/PNGs/usa_new_and_confirmed.png?raw=true "Total New and Confirmed Cases of COVID-19 in USA")
 
+### Italy
 ![Total New and Confirmed Cases of COVID-19 in Italy](./output/PNGs/italy_new_and_confirmed.png?raw=true "Total New and Confirmed Cases of COVID-19 in Italy")
 
 ## Total Cases
