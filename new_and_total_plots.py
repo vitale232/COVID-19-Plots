@@ -9,8 +9,8 @@ plt.style.use('dark_background')
 
 raw_usa_states_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\usa.csv'
 world_new_cases_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\countries_new_cases.csv'
-show_figure = False
-save_figure = True
+show_figure = True
+save_figure = False
 start_date = date(2020, 1, 22)
 
 # Prepare US cases from state data
@@ -25,6 +25,8 @@ usa_new_cases['NewCases'] = usa_new_cases.Confirmed.diff()
 
 usa_new_cases = usa_new_cases.reset_index()
 usa_new_cases['Date'] = pd.to_datetime(usa_new_cases.Date)
+
+usa_new_cases = usa_new_cases[usa_new_cases.Date >= pd.Timestamp(start_date)]
 
 # USA Cases
 fig1, ax1 = plt.subplots(figsize=(13, 7))
@@ -65,6 +67,7 @@ italy = pd.concat([
     columns=['Date', 'Country', 'Confirmed', 'Deaths', 'NewCases', 'Recovered'])
 ])
 italy['Date'] = pd.to_datetime(italy.Date)
+italy = italy[italy.Date >= pd.Timestamp(start_date)]
 italy = italy.sort_values(by='Date')
 
 fig2, ax2 = plt.subplots(figsize=(13, 7))
