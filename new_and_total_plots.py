@@ -53,6 +53,39 @@ if save_figure:
     ))
     fig1.savefig(png_path)
 
+# USA max possible cases assumming 86% undiagnosed cases
+max_estimate = usa_new_cases.Confirmed + usa_new_cases.Confirmed * 0.86
+fig1, ax1 = plt.subplots(figsize=(13, 7))
+poly_container = ax1.fill_between(
+    usa_new_cases.Date,
+    usa_new_cases.Confirmed, max_estimate,
+    color='#fa8174', alpha=0.25
+)
+bar_container = ax1.bar(usa_new_cases.Date, usa_new_cases.NewCases, color='#feffb3')
+confirmed_line = ax1.plot(usa_new_cases.Date, usa_new_cases.Confirmed, color='orange')
+max_line = ax1.plot(usa_new_cases.Date, max_estimate, color='red')
+ax1.legend(
+    (confirmed_line[0], max_line[0], poly_container, bar_container[0]),
+    ('Confirmed Cases', 'Estimated Cases (Includes Undiagnosed)', 'Possible Total Cases Range', 'New Cases'),
+    loc='upper left'
+)
+plt.title('New, Confirmed, and Possible COVID-19 Cases in the USA')
+ax1.set_xlabel('Date')
+ax1.set_ylabel('Number of Cases')
+fig1.tight_layout()
+
+if show_figure:
+    plt.show()
+
+if save_figure:
+    png_path = os.path.abspath(os.path.join(
+        os.path.dirname(raw_usa_states_csv),
+        '..',
+        'PNGs',
+        'usa_new_and_confirmed_estimated.png'
+    ))
+    fig1.savefig(png_path)
+
 
 # Italy cases
 world_new_cases = pd.read_csv(world_new_cases_csv)
