@@ -20,7 +20,7 @@ def verbose_checkcall(command, shell=False):
 # Check for new data from Johns Hopkins
 print('Pull data from GitHub')
 data_dir = os.path.abspath(os.path.join(
-    os.path.dirname(__file__),
+    BASE_DIR,
     'data',
     'COVID-19'
 ))
@@ -34,9 +34,9 @@ verbose_checkcall(download_data_command)
 
 # Run the parse_and_plot.py script
 print('\nParse the data and make some plots')
-os.chdir(os.path.abspath(os.path.join(
-    os.path.dirname(__file__)
-)))
+os.chdir(BASE_DIR)
+
+print(BASE_DIR)
 
 python_parse_and_plot_command = [
     PYTHON,
@@ -58,7 +58,7 @@ git_status_command = [
     'git',
     'status'
 ]
-verbose_checkcall(git_status_command)
+verbose_checkcall(git_status_command, shell=True)
 
 print('\nAdd files to git')
 git_add_command = [
@@ -66,7 +66,7 @@ git_add_command = [
     'add',
     '.'
 ]
-verbose_checkcall(git_add_command)
+verbose_checkcall(git_add_command, shell=True)
 
 print('\nCommit files to git')
 git_commit_command = [
@@ -75,14 +75,14 @@ git_commit_command = [
     '-m',
     'Update figures (from script)'
 ]
-verbose_checkcall(git_commit_command)
+verbose_checkcall(git_commit_command, shell=True)
 
 print('\nPush files to git')
 git_push_command = [
     'git',
     'push'
 ]
-verbose_checkcall(git_push_command)
+verbose_checkcall(git_push_command, shell=True)
 
 print('\nGit status:')
-verbose_checkcall(git_status_command)
+verbose_checkcall(git_status_command, shell=True)

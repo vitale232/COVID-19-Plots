@@ -9,8 +9,8 @@ plt.style.use('dark_background')
 
 raw_usa_states_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\usa.csv'
 world_new_cases_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\countries_new_cases.csv'
-show_figure = True
-save_figure = False
+show_figure = False
+save_figure = True
 start_date = date(2020, 1, 22)
 
 # Prepare US cases from state data
