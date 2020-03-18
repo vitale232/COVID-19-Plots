@@ -13,6 +13,7 @@ from abbreviations import state_abbreviations
 plot_states = ['Washington', 'New York', 'California', 'Massachusetts', 'Florida', 'New Jersey']
 plot_countries = ['USA', 'France', 'Germany', 'Canada', 'South Korea', 'Italy']
 countries_start_date = date(2020, 2, 19)
+countries_skip_date = date(2020, 3, 12)
 daily_reports_dir = r'C:\Users\andrew\Documents\covid19\data\COVID-19\csse_covid_19_data\csse_covid_19_daily_reports'
 output_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\usa.csv'
 save_figure = True
@@ -42,7 +43,7 @@ daily_csvs = os.listdir(daily_reports_dir)
 countries = pd.DataFrame([[]])
 for csv in daily_csvs:
     if not date_regex.match(csv):
-        print(f'Skipping {csv}')
+        print(f'  Skipping {csv}')
         continue
     print(f'Processing {csv}')
     
@@ -308,7 +309,8 @@ countries_new_cases = countries_new_cases.loc[
     countries_new_cases.Country.isin(plot_countries)
 ]
 countries_new_cases = countries_new_cases.loc[
-    countries_new_cases.Date >= countries_start_date
+    (countries_new_cases.Date >= countries_start_date) &
+    (countries_new_cases.Date != countries_skip_date)
 ]
 countries_new_cases = countries_new_cases.set_index(['Date', 'Country'])
 
