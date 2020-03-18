@@ -66,7 +66,7 @@ confirmed_line = ax1.plot(usa_new_cases.Date, usa_new_cases.Confirmed, color='or
 max_line = ax1.plot(usa_new_cases.Date, max_estimate, color='red')
 ax1.legend(
     (confirmed_line[0], max_line[0], poly_container, bar_container[0]),
-    ('Confirmed Cases', 'Estimated Cases (Includes Undiagnosed)', 'Possible Total Cases Range', 'New Cases'),
+    ('Confirmed Cases', 'Estimated Cases (Includes Undiagnosed)', 'Possible Total Cases Range', 'Confirmed New Cases'),
     loc='upper left'
 )
 plt.title('New, Confirmed, and Possible COVID-19 Cases in the USA')
