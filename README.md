@@ -8,7 +8,7 @@ The true heroes here are the fine folks at Johns Hopkins that have an awesome [d
 
 There is a distinction in these figures between "Total Cases" and "New Cases". **Total cases** is the total number of confirmed cases of COVID-19 for the reporting area as of a given date. The **new cases** are newly identified cases in the reporting area as of a given date.
 
-The figures below are generated and published in the `./automate_make_plots.py` script. Python was managed using Anaconda. The conda env is output to the `./environment.yml` file.
+The figures below are generated and published in the `./source/automate_make_plots.py` script. Python was managed using Anaconda. The conda env is output to the `./environment.yml` file.
 
 ## New and Total Cases USA and Italy
 
