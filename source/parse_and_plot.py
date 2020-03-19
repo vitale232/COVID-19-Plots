@@ -20,6 +20,14 @@ save_figure = True
 show_figure = False
 save_all_new_cases = True
 
+start_time = datetime.now()
+
+print(f'\nRunning script : {os.path.abspath(__file__)}')
+print(f'Start time     : {start_time}')
+print(f'Showing plots  : {show_figure}')
+print(f'Saving plots   : {save_figure}\n')
+
+
 csv_dir = os.path.dirname(output_csv)
 if not os.path.exists(csv_dir):
     os.makedirs(csv_dir)
@@ -56,7 +64,7 @@ for csv in daily_csvs:
     cases_date = datetime.strptime(csv.replace('.csv', ''), r'%m-%d-%Y').date()
     daily_countries['Date'] = cases_date
     if not daily_countries.empty:
-        countries = countries.append(daily_countries)
+        countries = countries.append(daily_countries, sort=True)
 
 usa = countries.loc[countries['Country/Region'] == 'US']
 china = countries.loc[countries['Country/Region'].isin(['China', 'Mainland China'])]
@@ -175,7 +183,7 @@ for state_df in state_dfs:
     state_df['NewCases'] = state_df.Confirmed.diff()
     new_cases_dfs.append(state_df)
 
-new_cases = pd.concat(new_cases_dfs)
+new_cases = pd.concat(new_cases_dfs, sort=True)
 new_cases_csv = os.path.join(
     csv_dir,
     'states_new_cases.csv'
@@ -240,10 +248,13 @@ china_new_cases['NewCases'] = china_new_cases.Confirmed.diff()
 china_new_cases['Country'] = 'China'
 usa_new_cases['Country'] = 'USA'
 
-usa_china_new_cases = pd.concat([
-    usa_new_cases.reset_index(),
-    china_new_cases.reset_index()
-]).set_index([
+usa_china_new_cases = pd.concat(
+    [
+        usa_new_cases.reset_index(),
+        china_new_cases.reset_index()
+    ],
+    sort=True
+).set_index([
     'Date', 'Country'
 ])
 
@@ -296,15 +307,18 @@ italy_new_cases['Country'] = 'Italy'
 canada_new_cases['Country'] = 'Canada'
 south_korea_new_cases['Country'] = 'South Korea'
 
-countries_new_cases = pd.concat([
-    usa_new_cases.reset_index(),
-    france_new_cases.reset_index(),
-    germany_new_cases.reset_index(),
-    italy_new_cases.reset_index(),
-    canada_new_cases.reset_index(),
-    south_korea_new_cases.reset_index(),
-    china_new_cases.reset_index(),
-])
+countries_new_cases = pd.concat(
+    [
+        usa_new_cases.reset_index(),
+        france_new_cases.reset_index(),
+        germany_new_cases.reset_index(),
+        italy_new_cases.reset_index(),
+        canada_new_cases.reset_index(),
+        south_korea_new_cases.reset_index(),
+        china_new_cases.reset_index(),
+    ],
+    sort=True
+)
 countries_new_cases = countries_new_cases.loc[
     countries_new_cases.Country.isin(plot_countries)
 ]
@@ -341,3 +355,7 @@ if save_figure:
     )
     countries_new_cases_fig = countries_new_cases_ax.get_figure()
     countries_new_cases_fig.savefig(countries_new_cases_png)
+
+end_time = datetime.now()
+print(f'\nScript completed : {end_time}')
+print(f'Run time         : {end_time-start_time}')

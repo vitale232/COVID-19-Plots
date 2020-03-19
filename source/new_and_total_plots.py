@@ -1,8 +1,11 @@
-from datetime import date
+from datetime import date, datetime
 import os
 
 import pandas as pd
 import matplotlib.pyplot as plt
+
+from pandas.plotting import register_matplotlib_converters
+register_matplotlib_converters()
 plt.rcParams.update({'font.size': 14})
 plt.style.use('dark_background')
 
@@ -12,6 +15,13 @@ world_new_cases_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\countries_
 show_figure = False
 save_figure = True
 start_date = date(2020, 1, 22)
+
+start_time = datetime.now()
+
+print(f'\nRunning script : {os.path.abspath(__file__)}')
+print(f'Start time     : {start_time}')
+print(f'Showing plots  : {show_figure}')
+print(f'Saving plots   : {save_figure}')
 
 # Prepare US cases from state data
 raw_states = pd.read_csv(raw_usa_states_csv)
@@ -92,13 +102,16 @@ world_new_cases = pd.read_csv(world_new_cases_csv)
 world_new_cases['Date'] = pd.to_datetime(world_new_cases.Date, format=r'%Y-%m-%d')
 
 italy = world_new_cases.loc[world_new_cases['Country'] == 'Italy']
-italy = pd.concat([
-    italy,
-    pd.DataFrame([[
-        start_date, 'Italy', 0, 0, 0, 0
-    ]],
-    columns=['Date', 'Country', 'Confirmed', 'Deaths', 'NewCases', 'Recovered'])
-])
+italy = pd.concat(
+    [
+        italy,
+        pd.DataFrame([[
+            start_date, 'Italy', 0, 0, 0, 0
+        ]],
+        columns=['Date', 'Country', 'Confirmed', 'Deaths', 'NewCases', 'Recovered'])
+    ],
+    sort=True
+)
 italy['Date'] = pd.to_datetime(italy.Date)
 italy = italy[italy.Date >= pd.Timestamp(start_date)]
 italy = italy.sort_values(by='Date')
@@ -156,3 +169,7 @@ if save_figure:
         'italy_usa_new_and_confirmed.png'
     ))
     fig3.savefig(png_path)
+
+end_time = datetime.now()
+print(f'\nScript completed : {end_time}')
+print(f'Run time         : {end_time-start_time}')
