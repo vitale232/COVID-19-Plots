@@ -1,6 +1,7 @@
-from datetime import datetime
+from datetime import date, datetime
 import os
 import subprocess
+import shutil
 import sys
 
 
@@ -27,6 +28,29 @@ def verbose_checkcall(command, shell=False):
     print(f' {cmd}')
     subprocess.check_call(command, shell=shell)
     return True
+
+# Archive current PNGs
+png_dir = os.path.join(
+    BASE_DIR,
+    'output',
+    'PNGs',
+)
+archive_dir = os.path.join(
+    png_dir,
+    'archive',
+    str(date.today())
+)
+print(f'Archiving PNGs to:\n {archive_dir}')
+if not os.path.isdir(archive_dir):
+    os.makedirs(archive_dir)
+
+for png_file in os.listdir(png_dir):
+    if not png_file.endswith('.png'):
+        continue
+    shutil.copyfile(
+        os.path.join(png_dir, png_file),
+        os.path.join(archive_dir, png_file)
+    )
 
 # Check for new data from Johns Hopkins
 print('Pull data from GitHub')

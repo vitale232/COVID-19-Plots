@@ -98,7 +98,7 @@ if save_figure:
     ))
     fig1.savefig(png_path)
 
-# Trail off the 86% number by 1% each day after 3/19/2020 to simulate increased testing
+# Trail off the 86% number by 1% each day after diminish_date to simulate increased testing
 usa_new_cases = usa_new_cases.reset_index()
 zero_days = timedelta(0)
 usa_new_cases['Date'] = usa_new_cases.Date.dt.date
