@@ -55,7 +55,7 @@ python_parse_and_plot_command = [
 verbose_checkcall(python_parse_and_plot_command, shell=True)
 
 # Run the new_and_total_plots.py script
-print('\nCalling script')
+print('Calling script')
 new_and_total_plots_command = [
     PYTHON,
     os.path.join(SRC_DIR, 'new_and_total_plots.py')
