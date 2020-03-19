@@ -46,7 +46,7 @@ cummulative_output_csv = os.path.join(
 )
 
 # Loop through the CSV directory and grab each CSV with a date
-print(f'Reading in CSVs from {daily_reports_dir}')
+print(f'Reading CSVs from {daily_reports_dir}')
 date_regex = re.compile(r'^\d{2}-\d{2}-\d{4}.csv$')
 daily_csvs = os.listdir(daily_reports_dir)
 countries = pd.DataFrame([[]])
