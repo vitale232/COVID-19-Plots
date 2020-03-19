@@ -7,8 +7,13 @@ PYTHON = os.path.abspath(os.path.join(
     sys.exec_prefix,
     'python.exe'
 ))
-BASE_DIR = os.path.abspath(
-    os.path.dirname(__file__)
+BASE_DIR = os.path.abspath(os.path.join(
+    os.path.dirname(__file__),
+    '..',
+))
+SRC_DIR = os.path.join(
+    BASE_DIR,
+    'source'
 )
 
 def verbose_checkcall(command, shell=False):
@@ -40,14 +45,14 @@ print(BASE_DIR)
 
 python_parse_and_plot_command = [
     PYTHON,
-    os.path.join(BASE_DIR, 'parse_and_plot.py')
+    os.path.join(SRC_DIR, 'parse_and_plot.py')
 ]
 verbose_checkcall(python_parse_and_plot_command, shell=True)
 
 # Run the new_and_total_plots.py script
 new_and_total_plots_command = [
     PYTHON,
-    os.path.join(BASE_DIR, 'new_and_total_plots.py')
+    os.path.join(SRC_DIR, 'new_and_total_plots.py')
 ]
 verbose_checkcall(new_and_total_plots_command)
 
