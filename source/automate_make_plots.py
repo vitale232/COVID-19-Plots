@@ -24,6 +24,7 @@ SRC_DIR = os.path.join(
 
 def verbose_checkcall(command, shell=False):
     cmd = ' '.join(command)
+    print('Running command:')
     print(f' {cmd}')
     subprocess.check_call(command, shell=shell)
     return True
