@@ -46,6 +46,7 @@ cummulative_output_csv = os.path.join(
 )
 
 # Loop through the CSV directory and grab each CSV with a date
+print(f'Reading in CSVs from {daily_reports_dir}')
 date_regex = re.compile(r'^\d{2}-\d{2}-\d{4}.csv$')
 daily_csvs = os.listdir(daily_reports_dir)
 countries = pd.DataFrame([[]])
@@ -66,6 +67,7 @@ for csv in daily_csvs:
     if not daily_countries.empty:
         countries = countries.append(daily_countries, sort=True)
 
+print('\nAnalyzing and plotting')
 usa = countries.loc[countries['Country/Region'] == 'US']
 china = countries.loc[countries['Country/Region'].isin(['China', 'Mainland China'])]
 france = countries.loc[countries['Country/Region'] == 'France']
