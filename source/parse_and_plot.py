@@ -358,4 +358,4 @@ if save_figure:
 
 end_time = datetime.now()
 print(f'\nScript completed : {end_time}')
-print(f'Run time         : {end_time-start_time}')
+print(f'Run time         : {end_time-start_time}\n')

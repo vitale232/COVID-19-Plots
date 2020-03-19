@@ -1,6 +1,12 @@
+from datetime import datetime
 import os
 import subprocess
 import sys
+
+
+start_time = datetime.now()
+print(f'\nRunning script : {os.path.abspath(__file__)}')
+print(f'Start time     : {start_time}')
 
 
 PYTHON = os.path.abspath(os.path.join(
@@ -91,3 +97,7 @@ verbose_checkcall(git_push_command, shell=True)
 
 print('\nGit status:')
 verbose_checkcall(git_status_command, shell=True)
+
+end_time = datetime.now()
+print(f'\nScript completed : {end_time}')
+print(f'Run time         : {end_time-start_time}\n')
