@@ -116,7 +116,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 9.0,2020-03-07,0.0,4.0,0.0,Texas
 12.0,2020-03-08,0.0,3.0,0.0,Texas
 14.0,2020-03-09,0.0,2.0,0.0,Texas
-13.0,2020-03-10,0.0,-1.0,0.0,Texas
+13.0,2020-03-10,0.0,0.0,0.0,Texas
 21.0,2020-03-11,0.0,8.0,0.0,Texas
 27.0,2020-03-12,0.0,6.0,0.0,Texas
 43.0,2020-03-13,0.0,16.0,0.0,Texas
@@ -142,7 +142,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 643.0,2020-03-15,40.0,71.0,1.0,Washington
 904.0,2020-03-16,48.0,261.0,1.0,Washington
 1076.0,2020-03-17,55.0,172.0,1.0,Washington
-1014.0,2020-03-18,55.0,-62.0,0.0,Washington
+1014.0,2020-03-18,55.0,0.0,0.0,Washington
 1.0,2020-03-01,0.0,,0.0,Wisconsin
 1.0,2020-03-02,0.0,0.0,0.0,Wisconsin
 1.0,2020-03-03,0.0,0.0,1.0,Wisconsin
@@ -185,8 +185,8 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 2.0,2020-03-06,0.0,0.0,0.0,New Hampshire
 2.0,2020-03-07,0.0,0.0,0.0,New Hampshire
 6.0,2020-03-08,0.0,4.0,0.0,New Hampshire
-5.0,2020-03-09,0.0,-1.0,0.0,New Hampshire
-4.0,2020-03-10,0.0,-1.0,0.0,New Hampshire
+5.0,2020-03-09,0.0,0.0,0.0,New Hampshire
+4.0,2020-03-10,0.0,0.0,0.0,New Hampshire
 5.0,2020-03-11,0.0,1.0,0.0,New Hampshire
 6.0,2020-03-12,0.0,1.0,0.0,New Hampshire
 6.0,2020-03-13,0.0,0.0,0.0,New Hampshire
@@ -217,7 +217,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 2.0,2020-03-05,0.0,0.0,0.0,Georgia
 3.0,2020-03-06,0.0,1.0,0.0,Georgia
 6.0,2020-03-07,0.0,3.0,0.0,Georgia
-5.0,2020-03-08,0.0,-1.0,0.0,Georgia
+5.0,2020-03-08,0.0,0.0,0.0,Georgia
 10.0,2020-03-09,0.0,5.0,0.0,Georgia
 17.0,2020-03-10,0.0,7.0,0.0,Georgia
 23.0,2020-03-11,0.0,6.0,0.0,Georgia
@@ -257,7 +257,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 24.0,2020-03-15,0.0,3.0,0.0,Nevada
 45.0,2020-03-16,1.0,21.0,0.0,Nevada
 56.0,2020-03-17,1.0,11.0,0.0,Nevada
-55.0,2020-03-18,1.0,-1.0,0.0,Nevada
+55.0,2020-03-18,1.0,0.0,0.0,Nevada
 2.0,2020-03-05,0.0,,0.0,New Jersey
 2.0,2020-03-06,0.0,0.0,0.0,New Jersey
 4.0,2020-03-07,0.0,2.0,0.0,New Jersey
@@ -378,7 +378,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 112.0,2020-03-17,0.0,35.0,0.0,Pennsylvania
 152.0,2020-03-18,0.0,40.0,0.0,Pennsylvania
 2.0,2020-03-07,0.0,,0.0,Connecticut
-1.0,2020-03-08,0.0,-1.0,0.0,Connecticut
+1.0,2020-03-08,0.0,0.0,0.0,Connecticut
 1.0,2020-03-09,0.0,0.0,0.0,Connecticut
 2.0,2020-03-10,0.0,1.0,0.0,Connecticut
 3.0,2020-03-11,0.0,1.0,0.0,Connecticut
