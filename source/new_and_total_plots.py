@@ -1,5 +1,6 @@
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 import os
+import math
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -15,6 +16,7 @@ world_new_cases_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\countries_
 show_figure = False
 save_figure = True
 start_date = date(2020, 1, 22)
+diminish_date = date(2020, 3, 19)
 
 start_time = datetime.now()
 
@@ -96,6 +98,47 @@ if save_figure:
     ))
     fig1.savefig(png_path)
 
+# Trail off the 86% number by 1% each day after 3/19/2020 to simulate increased testing
+usa_new_cases = usa_new_cases.reset_index()
+zero_days = timedelta(0)
+usa_new_cases['Date'] = usa_new_cases.Date.dt.date
+
+days_since = usa_new_cases.Date - diminish_date
+days_since[days_since < zero_days] = zero_days
+adjustment_percent = days_since.apply(lambda x: 0.86 - (int(x.days) * 0.01))
+new_max_estimate = usa_new_cases.Confirmed + usa_new_cases.Confirmed * adjustment_percent
+
+
+fig1, ax1 = plt.subplots(figsize=(13, 7))
+poly_container = ax1.fill_between(
+    usa_new_cases.Date,
+    usa_new_cases.Confirmed, new_max_estimate,
+    color='#fa8174', alpha=0.25
+)
+bar_container = ax1.bar(usa_new_cases.Date, usa_new_cases.NewCases, color='#feffb3')
+confirmed_line = ax1.plot(usa_new_cases.Date, usa_new_cases.Confirmed, color='orange')
+max_line = ax1.plot(usa_new_cases.Date, new_max_estimate, color='red')
+ax1.legend(
+    (confirmed_line[0], max_line[0], poly_container, bar_container[0]),
+    ('Confirmed Cases', 'Estimated Cases (Includes Undiagnosed)', 'Possible Total Cases Range', 'Confirmed New Cases'),
+    loc='upper left'
+)
+plt.title('New, Confirmed, and Possible COVID-19 Cases in the USA')
+ax1.set_xlabel('Date')
+ax1.set_ylabel('Number of Cases')
+fig1.tight_layout()
+
+if show_figure:
+    plt.show()
+
+if save_figure:
+    png_path = os.path.abspath(os.path.join(
+        os.path.dirname(raw_usa_states_csv),
+        '..',
+        'PNGs',
+        'usa_new_and_confirmed_estimated_diminishing.png'
+    ))
+    fig1.savefig(png_path)
 
 # Italy cases
 world_new_cases = pd.read_csv(world_new_cases_csv)
