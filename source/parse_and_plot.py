@@ -186,6 +186,12 @@ for state_df in state_dfs:
     new_cases_dfs.append(state_df)
 
 new_cases = pd.concat(new_cases_dfs, sort=True)
+
+# If the diff() call leads to negative new cases, force it to 0
+# This was an issue on 2020-03-18 in Washington
+new_cases.loc[new_cases['NewCases'] < 0, 'NewCases'] = (
+    new_cases.loc[new_cases['NewCases'] < 0].shape[0] * [0]
+)
 new_cases_csv = os.path.join(
     csv_dir,
     'states_new_cases.csv'
