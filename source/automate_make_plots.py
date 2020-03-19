@@ -24,7 +24,6 @@ SRC_DIR = os.path.join(
 
 def verbose_checkcall(command, shell=False):
     cmd = ' '.join(command)
-    print('Running command:')
     print(f' {cmd}')
     subprocess.check_call(command, shell=shell)
     return True
@@ -48,6 +47,7 @@ verbose_checkcall(download_data_command)
 print('\nParse the data and make some plots')
 os.chdir(BASE_DIR)
 
+print('\nCalling script')
 python_parse_and_plot_command = [
     PYTHON,
     os.path.join(SRC_DIR, 'parse_and_plot.py')
@@ -55,6 +55,7 @@ python_parse_and_plot_command = [
 verbose_checkcall(python_parse_and_plot_command, shell=True)
 
 # Run the new_and_total_plots.py script
+print('\nCalling script')
 new_and_total_plots_command = [
     PYTHON,
     os.path.join(SRC_DIR, 'new_and_total_plots.py')
