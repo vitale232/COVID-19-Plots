@@ -47,8 +47,6 @@ verbose_checkcall(download_data_command)
 print('\nParse the data and make some plots')
 os.chdir(BASE_DIR)
 
-print(BASE_DIR)
-
 python_parse_and_plot_command = [
     PYTHON,
     os.path.join(SRC_DIR, 'parse_and_plot.py')
