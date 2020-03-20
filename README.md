@@ -34,6 +34,27 @@ Given the lack of effective COVID-19 testing in the United States, I've made a g
 
 ![New, Confirmed, and Possible COVID-19 Cases in the USA](./output/PNGs/usa_new_and_confirmed_estimated.png?raw=true "New, Confirmed, and Possible COVID-19 Cases in the USA")
 
+Hopefully the United States will start to get a better handle on the testing situation across the country. As that happens, we would expect the total number of cases and new cases to increase daily, but we would also expect the percentage of undiagnosed cases to decrease. To simulate this potential phenomenon, the following graph applies an 86% undocumented infection rate up until 3/19/2020. From that date on, the rate of undocumented infections is decreased by once percentage point.
+
+|    Date    | Rate of Undiagnosed Infections |
+|------------|--------------------------------|
+| 2020-03-18 | 86%                            |
+| 2020-03-19 | 86%                            |
+| 2020-03-20 | 85%                            |
+| 2020-03-21 | 84%                            |
+| 2020-03-22 | 83%                            |
+| ...        | ...                            |
+| 2020-04-01 | 73%                            |
+| ...        | ...                            |
+| 2020-06-01 | 0%                             |
+
+*This linear improvement in the rate of undiagnosed infections is not based on any literature, but rather is more of a thought experiment.*
+
+Applying those rates of undiagnosed infections produces the following estimate:
+
+![New, Confirmed, and Possible COVID-19 Cases in the USA Assuming Linear Improvement in Testing](./output/PNGs/usa_new_and_confirmed_estimated_diminishing.png?raw=true "New, Confirmed, and Possible COVID-19 Cases in the USA Assuming Linear Improvement in Testing")
+
+
 ### Italy
 ![Total New and Confirmed Cases of COVID-19 in Italy](./output/PNGs/italy_new_and_confirmed.png?raw=true "Total New and Confirmed Cases of COVID-19 in Italy")
 
