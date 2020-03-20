@@ -12,9 +12,14 @@ The figures below are generated and published in the `./source/automate_make_plo
 
 ## New and Total Cases USA and Italy
 
-### USA and Italy
+### USA and Italy Cases
 
 ![Total New and Confirmed Cases of COVID-19 in the USA and Italy](./output/PNGs/italy_usa_new_and_confirmed.png?raw=true "Total New and Confirmed Cases of COVID-19 in the USA and Italy")
+
+### USA and Italy Deaths
+
+![New and Total COVID-19 Fatalities in Italy and the USA](./output/PNGs/italy_usa_new_and_confirmed_fatalities.png?raw=true "New and Total COVID-19 Fatalities in Italy and the USA")
+
 
 ### USA
 ![Total New and Confirmed Cases of COVID-19 in USA](./output/PNGs/usa_new_and_confirmed.png?raw=true "Total New and Confirmed Cases of COVID-19 in USA")

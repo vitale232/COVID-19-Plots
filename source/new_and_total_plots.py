@@ -232,6 +232,51 @@ if save_figure:
     ))
     fig3.savefig(png_path)
 
+
+## USA and Italy fatalities on one plot
+usa['NewDeaths'] = usa.Deaths.diff()
+italy['NewDeaths'] = italy.Deaths.diff()
+
+fig3, ax3 = plt.subplots(figsize=(13, 7))
+usa_lines = ax3.plot(usa.Date, usa.Deaths, color='#81b1d2', zorder=20)
+italy_lines = ax3.plot(italy.Date, italy.Deaths, color='#fa8174', zorder=15)
+
+for day in italy.Date.tolist():
+    italy_new_day = italy.loc[italy.Date == day].NewDeaths.values[0]
+    usa_new_day = usa.loc[usa.Date == day].NewDeaths.values[0]
+
+    if italy_new_day > usa_new_day:
+        italy_zorder = 5 # force to bottom
+        usa_zorder = 10  # force to top
+    else:
+        usa_zorder = 5    # force to top
+        italy_zorder = 10 # force to bottom
+
+    italy_bars = ax3.bar(day, italy_new_day, color='#fa8174', zorder=italy_zorder)
+    usa_bars = ax3.bar(day, usa_new_day, color='#81b1d2', zorder=usa_zorder)
+
+ax3.legend(
+    (italy_lines[0], italy_bars[0], usa_lines[0], usa_bars[0]),
+    ('Italy Fatalities', 'Italy New Fatalities', 'USA Fatalities', 'USA New Fatalities'),
+    loc='upper left'
+)
+plt.title('New and Total COVID-19 Fatalities in Italy and the USA')
+ax3.set_xlabel('Date')
+ax3.set_ylabel('Number of Deaths')
+fig3.tight_layout()
+
+if show_figure:
+    plt.show()
+
+if save_figure:
+    png_path = os.path.abspath(os.path.join(
+        os.path.dirname(raw_usa_states_csv),
+        '..',
+        'PNGs',
+        'italy_usa_new_and_confirmed_fatalities.png'
+    ))
+    fig3.savefig(png_path)
+
 end_time = datetime.now()
 print(f'\nScript completed : {end_time}')
 print(f'Run time         : {end_time-start_time}\n')
