@@ -185,12 +185,31 @@ if save_figure:
 
 
 ## Italy and US on same plot
+italy['Date'] = italy.Date.dt.date
+italy = italy.loc[italy.Date > date(2020, 1, 25)]
+usa = usa_new_cases.copy()
+usa = usa.loc[usa.Date > date(2020, 1, 25)]
+
 fig3, ax3 = plt.subplots(figsize=(13, 7))
-italy_bars = ax3.bar(italy.Date, italy.NewCases, color='#fa8174')
+usa_lines = ax3.plot(usa.Date, usa.Confirmed, color='#81b1d2')
 italy_lines = ax3.plot(italy.Date, italy.Confirmed, color='#fa8174')
 
-usa_bars = ax3.bar(usa_new_cases.Date, usa_new_cases.NewCases, color='#81b1d2')
-usa_lines = ax3.plot(usa_new_cases.Date, usa_new_cases.Confirmed, color='#81b1d2')
+# The US overtook italy in new cases on 3/19/2020. Iterate through
+# the dates and draw the bigger new cases value on the bottom
+for day in italy.Date.tolist():
+    italy_new_day = italy.loc[italy.Date == day].NewCases.values[0]
+    usa_new_day = usa.loc[usa.Date == day].NewCases.values[0]
+
+    if italy_new_day > usa_new_day:
+        italy_zorder = 5 # force to bottom
+        usa_zorder = 10  # force to top
+    else:
+        usa_zorder = 5    # force to top
+        italy_zorder = 10 # force to bottom
+
+    italy_bars = ax3.bar(day, italy_new_day, color='#fa8174', zorder=italy_zorder)
+    usa_bars = ax3.bar(day, usa_new_day, color='#81b1d2', zorder=usa_zorder)
+
 ax3.legend(
     (italy_lines[0], italy_bars[0], usa_lines[0], usa_bars[0]),
     ('Italy Confirmed Cases', 'Italy New Cases', 'USA Confirmed Cases', 'USA New Cases'),
