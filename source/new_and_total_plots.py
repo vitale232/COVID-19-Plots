@@ -81,7 +81,7 @@ ax1.legend(
     ('Confirmed Cases', 'Estimated Cases (Includes Undiagnosed)', 'Possible Total Cases Range', 'Confirmed New Cases'),
     loc='upper left'
 )
-plt.title('New, Confirmed, and Possible COVID-19 Cases in the USA')
+plt.title('New, Confirmed, and Possible COVID-19 Cases in the USA Assuming 86% Undiagnosed')
 ax1.set_xlabel('Date')
 ax1.set_ylabel('Number of Cases')
 fig1.tight_layout()
@@ -123,7 +123,10 @@ ax1.legend(
     ('Confirmed Cases', 'Estimated Cases (Includes Undiagnosed)', 'Possible Total Cases Range', 'Confirmed New Cases'),
     loc='upper left'
 )
-plt.title('New, Confirmed, and Possible COVID-19 Cases in the USA')
+plt.title(
+    f'COVID-19 Cases in the USA Assuming 86% Undiagnosed, ' +
+    f'Decreasing 1% Starting {str(diminish_date)}'
+)
 ax1.set_xlabel('Date')
 ax1.set_ylabel('Number of Cases')
 fig1.tight_layout()
