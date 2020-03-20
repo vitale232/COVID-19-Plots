@@ -191,8 +191,8 @@ usa = usa_new_cases.copy()
 usa = usa.loc[usa.Date > date(2020, 1, 25)]
 
 fig3, ax3 = plt.subplots(figsize=(13, 7))
-usa_lines = ax3.plot(usa.Date, usa.Confirmed, color='#81b1d2')
-italy_lines = ax3.plot(italy.Date, italy.Confirmed, color='#fa8174')
+usa_lines = ax3.plot(usa.Date, usa.Confirmed, color='#81b1d2', zorder=20)
+italy_lines = ax3.plot(italy.Date, italy.Confirmed, color='#fa8174', zorder=15)
 
 # The US overtook italy in new cases on 3/19/2020. Iterate through
 # the dates and draw the bigger new cases value on the bottom
