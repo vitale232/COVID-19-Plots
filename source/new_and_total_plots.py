@@ -280,6 +280,66 @@ if save_figure:
     ))
     fig3.savefig(png_path)
 
+
+# Trail off the 86% number by 1% each day after diminish_date to simulate increased testing
+# Add 1% each day
+usa_new_cases = usa_new_cases.reset_index()
+zero_days = timedelta(0)
+
+days_since = usa_new_cases.Date - diminish_date
+days_since[days_since < zero_days] = zero_days
+adjustment_percent_negative = days_since.apply(lambda x: 0.86 - (int(x.days) * 0.01))
+adjustment_percent_positive = days_since.apply(lambda x: 0.86 + (int(x.days) * 0.01))
+increasing_max_estimate = usa_new_cases.Confirmed + usa_new_cases.Confirmed * adjustment_percent_positive
+decreasing_max_estimate = usa_new_cases.Confirmed + usa_new_cases.Confirmed * adjustment_percent_negative
+
+fig1, ax1 = plt.subplots(figsize=(13, 7))
+poly_container = ax1.fill_between(
+    usa_new_cases.Date,
+    usa_new_cases.Confirmed, increasing_max_estimate,
+    color='#fa8174', alpha=0.25
+)
+bar_container = ax1.bar(usa_new_cases.Date, usa_new_cases.NewCases, color='#feffb3')
+confirmed_line = ax1.plot(usa_new_cases.Date, usa_new_cases.Confirmed, color='orange')
+decreasing_line = ax1.plot(usa_new_cases.Date, decreasing_max_estimate, color='#81b1d2')
+increasing_line = ax1.plot(usa_new_cases.Date, increasing_max_estimate, color='red')
+ax1.legend(
+    (
+        confirmed_line[0],
+        increasing_line[0],
+        decreasing_line[0],
+        poly_container,
+        bar_container[0]
+    ),
+    (
+        'Confirmed Cases',
+        r'Estimated Cases (Includes Undiagnosed, increasing 1% daily)',
+        r'Estimated Cases (Includes Undiagnosed, decreasing 1% daily)',
+        'Possible Total Cases Range',
+        'Confirmed New Cases'
+    ),
+    loc='upper left'
+)
+plt.title(
+    f'COVID-19 Cases in the USA Assuming 86% Undiagnosed, ' +
+    f'Incr./Decr. 1% Starting {str(diminish_date)}'
+)
+ax1.set_xlabel('Date')
+ax1.set_ylabel('Number of Cases')
+fig1.tight_layout()
+
+if show_figure:
+    plt.show()
+
+if save_figure:
+    png_path = os.path.abspath(os.path.join(
+        os.path.dirname(raw_usa_states_csv),
+        '..',
+        'PNGs',
+        'usa_new_and_confirmed_estimated_increase_decrease.png'
+    ))
+    fig1.savefig(png_path)
+
 end_time = datetime.now()
 print(f'\nScript completed : {end_time}')
 print(f'Run time         : {end_time-start_time}\n')
