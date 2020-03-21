@@ -40,7 +40,7 @@ archive_dir = os.path.join(
     'archive',
     str(date.today())
 )
-print(f'Archiving PNGs to:\n {archive_dir}')
+print(f'\nArchiving PNGs to:\n {archive_dir}')
 if not os.path.isdir(archive_dir):
     os.makedirs(archive_dir)
 
@@ -53,7 +53,7 @@ for png_file in os.listdir(png_dir):
     )
 
 # Check for new data from Johns Hopkins
-print('Pull data from GitHub')
+print('\nPull data from GitHub')
 data_dir = os.path.abspath(os.path.join(
     BASE_DIR,
     'data',
