@@ -58,10 +58,31 @@ for csv in daily_csvs:
     
     # Subset the countries of potential interest. Likely to change
     df = pd.read_csv(os.path.join(daily_reports_dir, csv))
-    daily_countries = df.loc[df['Country/Region'].isin([
-        'US', 'China', 'Mainland China', 'Germany',
-        'France', 'Italy', 'Canada', 'South Korea'
-    ])].copy()
+    try:
+        daily_countries = df.loc[df['Country/Region'].isin([
+            'US', 'China', 'Mainland China', 'Germany',
+            'France', 'Italy', 'Canada', 'South Korea'
+        ])].copy()
+    except KeyError:
+        daily_countries = df.loc[df['Country_Region'].isin([
+            'US', 'China', 'Mainland China', 'Germany',
+            'France', 'Italy', 'Canada', 'South Korea'
+        ])].copy()
+        daily_countries = daily_countries[[
+            'Province_State', 'Country_Region', 'Last_Update',
+            'Confirmed', 'Deaths', 'Recovered', 'Active',
+            'Lat', 'Long_'
+        ]]
+        daily_countries = daily_countries.rename(columns={
+            'Province_State': 'Province/State',
+            'Country_Region': 'Country/Region',
+            'Last_Update': 'Last Update',
+            'Confirmed': 'Confirmed',
+            'Deaths': 'Deaths',
+            'Recovered': 'Recovered',
+            'Lat': 'Latitude',
+            'Long_': 'Longitude',
+        })
     cases_date = datetime.strptime(csv.replace('.csv', ''), r'%m-%d-%Y').date()
     daily_countries['Date'] = cases_date
     if not daily_countries.empty:
@@ -133,15 +154,14 @@ for row in split_state:
             except Exception as exc2:
                 print(f'EXCEPTION : {type(exc2).__name__} : ROW: {row}')
                 state.append(None)
-
 usa_by_state['State'] = state
-usa_by_state.dropna(inplace=True)
+# print(usa_by_state.tail())
+# usa_by_state.dropna(inplace=True)
 usa_by_state = usa_by_state.loc[~usa_by_state['Province/State'].str.contains('Princess')]
 
 state_cases_group = usa_by_state[
     ['Date', 'Confirmed', 'Recovered', 'Deaths', 'State']
 ].groupby(['Date', 'State']).sum()
-
 state_cases = state_cases_group.reset_index()
 state_cases.to_csv(os.path.join(
     csv_dir,
