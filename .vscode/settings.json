@@ -1,7 +1,10 @@
 {
-    "python.pythonPath": "C:\\Users\\andrew\\Miniconda3\\envs\\covid19\\python.exe",
+    "python.pythonPath": "/home/vitale232/miniconda3/envs/covid19/bin/python",
+    "python.autoComplete.extraPaths": ["/home/vitale232/Documents/covid-19-plots/source"],
     "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
+    "python.linting.pylintEnabled": false,
     "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 2000
+    "files.autoSaveDelay": 2000,
+    "python.linting.banditEnabled": true,
+    "python.linting.pylamaEnabled": false
 }

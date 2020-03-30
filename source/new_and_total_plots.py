@@ -11,12 +11,21 @@ plt.rcParams.update({'font.size': 14})
 plt.style.use('dark_background')
 
 
-raw_usa_states_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\usa.csv'
-world_new_cases_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\countries_new_cases.csv'
 show_figure = False
 save_figure = True
 start_date = date(2020, 1, 22)
 diminish_date = date(2020, 3, 19)
+raw_usa_states_csv = os.path.abspath(os.path.join(
+    os.path.dirname(__file__),
+    '..',
+    'output',
+    'CSVs',
+    'usa.csv'
+))
+world_new_cases_csv = os.path.abspath(os.path.join(
+    os.path.dirname(raw_usa_states_csv),
+    'countries_new_cases.csv'
+))
 
 start_time = datetime.now()
 

@@ -10,16 +10,31 @@ import pandas as pd
 from abbreviations import state_abbreviations
 
 
-plot_states = ['Washington', 'New York', 'California', 'Massachusetts', 'Florida', 'New Jersey']
-plot_countries = ['USA', 'France', 'Germany', 'Canada', 'South Korea', 'Italy']
+plot_states = ['Washington', 'New York', 'California', 'Massachusetts', 'Florida', 'New Jersey', 'Connecticut']
+plot_countries = ['USA', 'France', 'Germany', 'Canada', 'South Korea', 'Italy', 'Spain']
 countries_start_date = date(2020, 2, 19)
 countries_skip_date = date(2020, 3, 12)
-daily_reports_dir = r'C:\Users\andrew\Documents\covid19\data\COVID-19\csse_covid_19_data\csse_covid_19_daily_reports'
-output_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\usa.csv'
+# daily_reports_dir = r'C:\Users\andrew\Documents\covid19\data\COVID-19\csse_covid_19_data\csse_covid_19_daily_reports'
+# output_csv = r'C:\Users\andrew\Documents\covid19\output\CSVs\usa.csv'
 save_figure = True
 show_figure = False
 save_all_new_cases = True
 
+daily_reports_dir = os.path.abspath(os.path.join(
+    os.path.dirname(__file__),
+    '..',
+    'data',
+    'COVID-19',
+    'csse_covid_19_data',
+    'csse_covid_19_daily_reports'
+))
+output_csv = os.path.abspath(os.path.join(
+    os.path.dirname(__file__),
+    '..',
+    'output',
+    'CSVs',
+    'usa.csv'
+))
 start_time = datetime.now()
 
 print(f'\nRunning script : {os.path.abspath(__file__)}')
@@ -50,7 +65,7 @@ print(f'Reading CSVs from {daily_reports_dir}')
 date_regex = re.compile(r'^\d{2}-\d{2}-\d{4}.csv$')
 daily_csvs = os.listdir(daily_reports_dir)
 countries = pd.DataFrame([[]])
-for csv in daily_csvs:
+for csv in sorted(daily_csvs):
     if not date_regex.match(csv):
         print(f'  Skipping {csv}')
         continue
@@ -61,12 +76,12 @@ for csv in daily_csvs:
     try:
         daily_countries = df.loc[df['Country/Region'].isin([
             'US', 'China', 'Mainland China', 'Germany',
-            'France', 'Italy', 'Canada', 'South Korea'
+            'France', 'Italy', 'Canada', 'South Korea', 'Spain'
         ])].copy()
     except KeyError:
         daily_countries = df.loc[df['Country_Region'].isin([
             'US', 'China', 'Mainland China', 'Germany',
-            'France', 'Italy', 'Canada', 'South Korea'
+            'France', 'Italy', 'Canada', 'South Korea', 'Spain'
         ])].copy()
         daily_countries = daily_countries[[
             'Province_State', 'Country_Region', 'Last_Update',
@@ -96,6 +111,7 @@ germany = countries.loc[countries['Country/Region'] == 'Germany']
 italy = countries.loc[countries['Country/Region'] == 'Italy']
 canada = countries.loc[countries['Country/Region'] == 'Canada']
 south_korea = countries.loc[countries['Country/Region'] == 'South Korea']
+spain = countries.loc[countries['Country/Region'] == 'Spain']
 
 usa.to_csv(output_csv)
 
@@ -327,6 +343,9 @@ canada_new_cases['NewCases'] = canada_new_cases.Confirmed.diff()
 south_korea_new_cases = south_korea[['Date', 'Confirmed', 'Recovered', 'Deaths']].groupby('Date').sum()
 south_korea_new_cases['NewCases'] = south_korea_new_cases.Confirmed.diff()
 
+spain_new_cases = spain[['Date', 'Confirmed', 'Recovered', 'Deaths']].groupby('Date').sum()
+spain_new_cases['NewCases'] = spain_new_cases.Confirmed.diff()
+
 
 france_new_cases['Country'] = 'France'
 usa_new_cases['Country'] = 'USA'
@@ -334,6 +353,7 @@ germany_new_cases['Country'] = 'Germany'
 italy_new_cases['Country'] = 'Italy'
 canada_new_cases['Country'] = 'Canada'
 south_korea_new_cases['Country'] = 'South Korea'
+spain_new_cases['Country'] = 'Spain'
 
 countries_new_cases = pd.concat(
     [
@@ -344,6 +364,7 @@ countries_new_cases = pd.concat(
         canada_new_cases.reset_index(),
         south_korea_new_cases.reset_index(),
         china_new_cases.reset_index(),
+        spain_new_cases.reset_index(),
     ],
     sort=True
 )
