@@ -10,13 +10,11 @@ print(f'\nRunning script : {os.path.abspath(__file__)}')
 print(f'Start time     : {start_time}')
 
 
-PYTHON = os.path.abspath(os.path.join(
-    sys.exec_prefix,
-    'python.exe'
-))
+PYTHON = os.path.abspath(sys.executable)
+
 BASE_DIR = os.path.abspath(os.path.join(
     os.path.dirname(__file__),
-    '..',
+    '..'
 ))
 SRC_DIR = os.path.join(
     BASE_DIR,
@@ -76,7 +74,7 @@ python_parse_and_plot_command = [
     PYTHON,
     os.path.join(SRC_DIR, 'parse_and_plot.py')
 ]
-verbose_checkcall(python_parse_and_plot_command, shell=True)
+verbose_checkcall(python_parse_and_plot_command)
 
 # Run the new_and_total_plots.py script
 print('Calling script')
@@ -93,7 +91,7 @@ git_status_command = [
     'git',
     'status'
 ]
-verbose_checkcall(git_status_command, shell=True)
+verbose_checkcall(git_status_command, shell=False)
 
 print('\nAdd files to git')
 git_add_command = [
@@ -101,7 +99,7 @@ git_add_command = [
     'add',
     '.'
 ]
-verbose_checkcall(git_add_command, shell=True)
+verbose_checkcall(git_add_command, shell=False)
 
 print('\nCommit files to git')
 git_commit_command = [
@@ -110,17 +108,17 @@ git_commit_command = [
     '-m',
     'Update figures (from script)'
 ]
-verbose_checkcall(git_commit_command, shell=True)
+verbose_checkcall(git_commit_command, shell=False)
 
 print('\nPush files to git')
 git_push_command = [
     'git',
     'push'
 ]
-verbose_checkcall(git_push_command, shell=True)
+verbose_checkcall(git_push_command, shell=False)
 
 print('\nGit status:')
-verbose_checkcall(git_status_command, shell=True)
+verbose_checkcall(git_status_command, shell=False)
 
 end_time = datetime.now()
 print(f'\nScript completed : {end_time}')
