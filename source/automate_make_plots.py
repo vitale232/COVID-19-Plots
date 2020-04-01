@@ -84,6 +84,13 @@ new_and_total_plots_command = [
 ]
 verbose_checkcall(new_and_total_plots_command)
 
+# Run the state_plots.py script
+print('Calling script')
+state_plots_command = [
+    PYTHON,
+    os.path.join(SRC_DIR, 'state_plots.py')
+]
+
 # Push the new plots to GitHub
 print(f'\nRunning git commands in directory:\n {os.getcwd()}\n')
 print('\nGit status:')
