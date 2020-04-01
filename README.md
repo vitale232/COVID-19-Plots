@@ -71,3 +71,7 @@ Applying those rates of undiagnosed infections produces the following estimate:
 ![New cases of COVID-19 in select US States](./output/PNGs/states_new_cases.png?raw=true "New cases of COVID-19 in select US States")
 
 ![New cases of COVID-19 in China and the USA](./output/PNGs/usa_china_new_cases.png?raw=true "New cases of COVID-19 in China and the USA")
+
+## New Deaths
+
+![New deaths from COVID-19 in select US States](./output/PNGs/usa_states_new_deaths.png?raw=true "New deaths from COVID=-19 in select US States")
