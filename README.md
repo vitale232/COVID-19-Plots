@@ -52,8 +52,11 @@ Hopefully the United States will start to get a better handle on the testing sit
 
 Applying those rates of undiagnosed infections produces the following estimate:
 
-![New, Confirmed, and Possible COVID-19 Cases in the USA Assuming Linear Improvement in Testing](./output/PNGs/usa_new_and_confirmed_estimated_diminishing.png?raw=true "New, Confirmed, and Possible COVID-19 Cases in the USA Assuming Linear Improvement in Testing")
+![New, Confirmed, and Possible COVID-19 Cases in the USA Assuming Linear Increase, Descrease in Unidentified Cases](./output/PNGs/usa_new_and_confirmed_estimated_diminishing.png?raw=true "New, Confirmed, and Possible COVID-19 Cases in the USA Assuming Linear Improvement in Testing")
 
+The testing story is still quite complicated across the US. This graphy assumes a linear increase and decrease in undiagnosed cases.
+
+![New, Confirmed, and Possible COVID-19 Cases in the USA Assuming Linear Improvement in Testing](./output/PNGs/usa_new_and_confirmed_estimated_increase_decrease.png?raw=true "New, Confirmed, and Possible COVID-19 Cases in the USA Assuming Linear Increase, Descreas in Testing")
 
 ### Italy
 ![Total New and Confirmed Cases of COVID-19 in Italy](./output/PNGs/italy_new_and_confirmed.png?raw=true "Total New and Confirmed Cases of COVID-19 in Italy")
