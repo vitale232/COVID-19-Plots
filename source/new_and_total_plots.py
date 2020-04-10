@@ -13,7 +13,7 @@ plt.style.use('dark_background')
 
 show_figure = False
 save_figure = True
-start_date = date(2020, 3, 1)
+start_date = date(2020, 2, 14)
 diminish_date = date(2020, 3, 19)
 raw_usa_states_csv = os.path.abspath(os.path.join(
     os.path.dirname(__file__),
