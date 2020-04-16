@@ -83,6 +83,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 10609.0,2020-04-12,506.0,175.0,0.0,Washington
 10635.0,2020-04-13,513.0,26.0,0.0,Washington
 10799.0,2020-04-14,530.0,164.0,0.0,Washington
+10942.0,2020-04-15,552.0,143.0,0.0,Washington
 1.0,2020-01-24,0.0,,0.0,Chicago
 1.0,2020-01-25,0.0,,0.0,Illinois
 1.0,2020-01-26,0.0,0.0,0.0,Illinois
@@ -165,6 +166,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 20852.0,2020-04-12,720.0,1672.0,0.0,Illinois
 22025.0,2020-04-13,798.0,1173.0,0.0,Illinois
 23248.0,2020-04-14,868.0,1223.0,0.0,Illinois
+24593.0,2020-04-15,949.0,1345.0,0.0,Illinois
 1.0,2020-01-26,0.0,,0.0,Arizona
 1.0,2020-01-27,0.0,0.0,0.0,Arizona
 1.0,2020-01-28,0.0,0.0,0.0,Arizona
@@ -245,6 +247,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 3542.0,2020-04-12,115.0,149.0,0.0,Arizona
 3705.0,2020-04-13,122.0,163.0,0.0,Arizona
 3809.0,2020-04-14,131.0,104.0,0.0,Arizona
+3964.0,2020-04-15,142.0,155.0,0.0,Arizona
 2.0,2020-01-26,0.0,,0.0,California
 2.0,2020-01-27,0.0,0.0,0.0,California
 2.0,2020-01-28,0.0,0.0,0.0,California
@@ -325,6 +328,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 22795.0,2020-04-12,641.0,1089.0,0.0,California
 23931.0,2020-04-13,715.0,1136.0,0.0,California
 25356.0,2020-04-14,768.0,1425.0,0.0,California
+26686.0,2020-04-15,861.0,1330.0,0.0,California
 1.0,2020-02-01,0.0,,0.0,Massachusetts
 1.0,2020-02-02,0.0,0.0,0.0,Massachusetts
 1.0,2020-02-03,0.0,0.0,0.0,Massachusetts
@@ -399,6 +403,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 25475.0,2020-04-12,756.0,2615.0,0.0,Massachusetts
 26867.0,2020-04-13,844.0,1392.0,0.0,Massachusetts
 28164.0,2020-04-14,844.0,1297.0,0.0,Massachusetts
+29918.0,2020-04-15,1108.0,1754.0,0.0,Massachusetts
 1.0,2020-02-05,0.0,,0.0,Wisconsin
 1.0,2020-02-06,0.0,0.0,0.0,Wisconsin
 1.0,2020-02-07,0.0,0.0,0.0,Wisconsin
@@ -469,6 +474,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 3341.0,2020-04-12,144.0,128.0,0.0,Wisconsin
 3428.0,2020-04-13,154.0,87.0,0.0,Wisconsin
 3555.0,2020-04-14,170.0,127.0,0.0,Wisconsin
+3721.0,2020-04-15,183.0,166.0,0.0,Wisconsin
 1.0,2020-02-13,0.0,,0.0,Texas
 1.0,2020-02-14,0.0,0.0,0.0,Texas
 1.0,2020-02-15,0.0,0.0,0.0,Texas
@@ -531,6 +537,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 13677.0,2020-04-12,283.0,654.0,0.0,Texas
 14275.0,2020-04-13,305.0,598.0,0.0,Texas
 15006.0,2020-04-14,342.0,731.0,0.0,Texas
+15907.0,2020-04-15,375.0,901.0,0.0,Texas
 11.0,2020-02-21,0.0,,0.0,Nebraska
 1.0,2020-03-06,0.0,0.0,0.0,Nebraska
 1.0,2020-03-07,0.0,0.0,0.0,Nebraska
@@ -572,6 +579,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 791.0,2020-04-12,17.0,92.0,0.0,Nebraska
 814.0,2020-04-13,17.0,23.0,0.0,Nebraska
 897.0,2020-04-14,20.0,83.0,0.0,Nebraska
+901.0,2020-04-15,20.0,4.0,0.0,Nebraska
 1.0,2020-02-29,0.0,,0.0,Oregon
 1.0,2020-03-01,0.0,0.0,0.0,Oregon
 3.0,2020-03-02,0.0,2.0,0.0,Oregon
@@ -618,6 +626,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 1527.0,2020-04-12,52.0,156.0,0.0,Oregon
 1584.0,2020-04-13,53.0,57.0,0.0,Oregon
 1633.0,2020-04-14,55.0,49.0,0.0,Oregon
+1663.0,2020-04-15,58.0,30.0,0.0,Oregon
 1.0,2020-03-01,0.0,,0.0,Rhode Island
 2.0,2020-03-02,0.0,1.0,0.0,Rhode Island
 2.0,2020-03-03,0.0,0.0,0.0,Rhode Island
@@ -663,6 +672,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 2665.0,2020-04-12,63.0,316.0,0.0,Rhode Island
 2665.0,2020-04-13,63.0,0.0,0.0,Rhode Island
 3251.0,2020-04-14,80.0,586.0,0.0,Rhode Island
+3251.0,2020-04-15,80.0,0.0,0.0,Rhode Island
 2.0,2020-03-02,0.0,,0.0,Florida
 3.0,2020-03-03,0.0,1.0,0.0,Florida
 3.0,2020-03-04,0.0,0.0,0.0,Florida
@@ -707,6 +717,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 19895.0,2020-04-12,461.0,1401.0,0.0,Florida
 21019.0,2020-04-13,499.0,1124.0,0.0,Florida
 21628.0,2020-04-14,571.0,609.0,0.0,Florida
+22511.0,2020-04-15,596.0,883.0,0.0,Florida
 1.0,2020-03-02,0.0,,0.0,New Hampshire
 2.0,2020-03-03,0.0,1.0,0.0,New Hampshire
 2.0,2020-03-04,0.0,0.0,0.0,New Hampshire
@@ -751,6 +762,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 929.0,2020-04-12,23.0,44.0,0.0,New Hampshire
 985.0,2020-04-13,23.0,56.0,0.0,New Hampshire
 922.0,2020-04-14,25.0,0.0,0.0,New Hampshire
+1139.0,2020-04-15,32.0,217.0,0.0,New Hampshire
 1.0,2020-03-02,0.0,,0.0,New York
 2.0,2020-03-03,0.0,1.0,0.0,New York
 11.0,2020-03-04,0.0,9.0,0.0,New York
@@ -795,6 +807,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 189033.0,2020-04-12,9385.0,8007.0,0.0,New York
 195749.0,2020-04-13,10058.0,6716.0,0.0,New York
 203020.0,2020-04-14,10842.0,7271.0,0.0,New York
+214454.0,2020-04-15,11617.0,11434.0,0.0,New York
 2.0,2020-03-03,0.0,,0.0,Georgia
 2.0,2020-03-04,0.0,0.0,0.0,Georgia
 2.0,2020-03-05,0.0,0.0,0.0,Georgia
@@ -838,6 +851,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 12452.0,2020-04-12,433.0,293.0,0.0,Georgia
 13315.0,2020-04-13,465.0,863.0,0.0,Georgia
 14578.0,2020-04-14,525.0,1263.0,0.0,Georgia
+14987.0,2020-04-15,552.0,409.0,0.0,Georgia
 1.0,2020-03-03,0.0,,0.0,North Carolina
 1.0,2020-03-04,0.0,0.0,0.0,North Carolina
 1.0,2020-03-05,0.0,0.0,0.0,North Carolina
@@ -881,6 +895,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 4570.0,2020-04-12,89.0,216.0,0.0,North Carolina
 4886.0,2020-04-13,94.0,316.0,0.0,North Carolina
 5113.0,2020-04-14,112.0,227.0,0.0,North Carolina
+5340.0,2020-04-15,130.0,227.0,0.0,North Carolina
 1.0,2020-03-05,0.0,,0.0,Nevada
 2.0,2020-03-06,0.0,1.0,0.0,Nevada
 2.0,2020-03-07,0.0,0.0,0.0,Nevada
@@ -922,6 +937,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 2836.0,2020-04-12,112.0,134.0,0.0,Nevada
 2990.0,2020-04-13,114.0,154.0,0.0,Nevada
 3134.0,2020-04-14,126.0,144.0,0.0,Nevada
+3211.0,2020-04-15,131.0,77.0,0.0,Nevada
 2.0,2020-03-05,0.0,,0.0,New Jersey
 2.0,2020-03-06,0.0,0.0,0.0,New Jersey
 4.0,2020-03-07,0.0,2.0,0.0,New Jersey
@@ -963,6 +979,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 61850.0,2020-04-12,2350.0,3699.0,0.0,New Jersey
 64584.0,2020-04-13,2443.0,2734.0,0.0,New Jersey
 68824.0,2020-04-14,2805.0,4240.0,0.0,New Jersey
+71030.0,2020-04-15,3156.0,2206.0,0.0,New Jersey
 1.0,2020-03-05,0.0,,0.0,Tennessee
 1.0,2020-03-06,0.0,0.0,0.0,Tennessee
 1.0,2020-03-07,0.0,0.0,0.0,Tennessee
@@ -1004,6 +1021,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 5508.0,2020-04-12,106.0,376.0,0.0,Tennessee
 5610.0,2020-04-13,109.0,102.0,0.0,Tennessee
 5827.0,2020-04-14,124.0,217.0,0.0,Tennessee
+5827.0,2020-04-15,124.0,0.0,0.0,Tennessee
 4.0,2020-03-06,0.0,,0.0,Colorado
 8.0,2020-03-07,0.0,4.0,0.0,Colorado
 8.0,2020-03-08,0.0,0.0,0.0,Colorado
@@ -1044,6 +1062,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 7307.0,2020-04-12,289.0,794.0,0.0,Colorado
 7691.0,2020-04-13,306.0,384.0,0.0,Colorado
 7950.0,2020-04-14,327.0,259.0,0.0,Colorado
+7956.0,2020-04-15,328.0,6.0,0.0,Colorado
 1.0,2020-03-06,0.0,,0.0,Indiana
 1.0,2020-03-07,0.0,0.0,0.0,Indiana
 2.0,2020-03-08,0.0,1.0,0.0,Indiana
@@ -1084,6 +1103,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 7928.0,2020-04-12,343.0,493.0,0.0,Indiana
 8359.0,2020-04-13,350.0,431.0,0.0,Indiana
 8527.0,2020-04-14,387.0,168.0,0.0,Indiana
+8960.0,2020-04-15,436.0,433.0,0.0,Indiana
 1.0,2020-03-06,0.0,,0.0,Kentucky
 1.0,2020-03-07,0.0,0.0,0.0,Kentucky
 1.0,2020-03-08,0.0,0.0,0.0,Kentucky
@@ -1124,6 +1144,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 1963.0,2020-04-12,97.0,270.0,0.0,Kentucky
 2018.0,2020-04-13,113.0,55.0,0.0,Kentucky
 2048.0,2020-04-14,106.0,30.0,0.0,Kentucky
+2210.0,2020-04-15,115.0,162.0,0.0,Kentucky
 3.0,2020-03-06,0.0,,0.0,Maryland
 3.0,2020-03-07,0.0,0.0,0.0,Maryland
 5.0,2020-03-08,0.0,2.0,0.0,Maryland
@@ -1164,6 +1185,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 8225.0,2020-04-12,236.0,531.0,0.0,Maryland
 8936.0,2020-04-13,262.0,711.0,0.0,Maryland
 9472.0,2020-04-14,302.0,536.0,0.0,Maryland
+10032.0,2020-04-15,311.0,560.0,0.0,Maryland
 1.0,2020-03-06,0.0,,0.0,Minnesota
 1.0,2020-03-07,0.0,0.0,0.0,Minnesota
 1.0,2020-03-08,0.0,0.0,0.0,Minnesota
@@ -1204,6 +1226,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 1621.0,2020-04-12,70.0,194.0,0.0,Minnesota
 1621.0,2020-04-13,70.0,0.0,0.0,Minnesota
 1695.0,2020-04-14,79.0,74.0,0.0,Minnesota
+1809.0,2020-04-15,87.0,114.0,0.0,Minnesota
 2.0,2020-03-06,0.0,,0.0,Pennsylvania
 2.0,2020-03-07,0.0,0.0,0.0,Pennsylvania
 6.0,2020-03-08,0.0,4.0,0.0,Pennsylvania
@@ -1244,6 +1267,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 22938.0,2020-04-12,557.0,1219.0,0.0,Pennsylvania
 24292.0,2020-04-13,589.0,1354.0,0.0,Pennsylvania
 25465.0,2020-04-14,691.0,1173.0,0.0,Pennsylvania
+26753.0,2020-04-15,779.0,1288.0,0.0,Pennsylvania
 2.0,2020-03-07,0.0,,0.0,Connecticut
 1.0,2020-03-08,0.0,0.0,0.0,Connecticut
 1.0,2020-03-09,0.0,0.0,0.0,Connecticut
@@ -1283,6 +1307,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 12035.0,2020-04-12,554.0,525.0,0.0,Connecticut
 13381.0,2020-04-13,602.0,1346.0,0.0,Connecticut
 13989.0,2020-04-14,671.0,608.0,0.0,Connecticut
+14755.0,2020-04-15,868.0,766.0,0.0,Connecticut
 1.0,2020-03-07,0.0,,0.0,Hawaii
 1.0,2020-03-08,0.0,0.0,0.0,Hawaii
 2.0,2020-03-09,0.0,1.0,0.0,Hawaii
@@ -1322,6 +1347,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 499.0,2020-04-12,9.0,34.0,0.0,Hawaii
 504.0,2020-04-13,9.0,5.0,0.0,Hawaii
 511.0,2020-04-14,9.0,7.0,0.0,Hawaii
+524.0,2020-04-15,9.0,13.0,0.0,Hawaii
 1.0,2020-03-07,0.0,,0.0,Oklahoma
 1.0,2020-03-08,0.0,0.0,0.0,Oklahoma
 1.0,2020-03-09,0.0,0.0,0.0,Oklahoma
@@ -1361,6 +1387,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 1970.0,2020-04-12,96.0,102.0,0.0,Oklahoma
 2069.0,2020-04-13,99.0,99.0,0.0,Oklahoma
 2184.0,2020-04-14,108.0,115.0,0.0,Oklahoma
+2263.0,2020-04-15,123.0,79.0,0.0,Oklahoma
 2.0,2020-03-07,0.0,,0.0,South Carolina
 2.0,2020-03-08,0.0,0.0,0.0,South Carolina
 6.0,2020-03-09,0.0,4.0,0.0,South Carolina
@@ -1400,6 +1427,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 3320.0,2020-04-12,82.0,109.0,0.0,South Carolina
 3391.0,2020-04-13,82.0,71.0,0.0,South Carolina
 3553.0,2020-04-14,97.0,162.0,0.0,South Carolina
+3656.0,2020-04-15,106.0,103.0,0.0,South Carolina
 1.0,2020-03-07,0.0,,0.0,Utah
 1.0,2020-03-08,0.0,0.0,0.0,Utah
 1.0,2020-03-09,0.0,0.0,0.0,Utah
@@ -1439,6 +1467,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 2303.0,2020-04-12,18.0,96.0,0.0,Utah
 2363.0,2020-04-13,13.0,60.0,0.0,Utah
 2417.0,2020-04-14,18.0,54.0,0.0,Utah
+2548.0,2020-04-15,20.0,131.0,0.0,Utah
 2.0,2020-03-08,0.0,,0.0,District of Columbia
 2.0,2020-03-09,0.0,0.0,0.0,District of Columbia
 5.0,2020-03-10,0.0,3.0,0.0,District of Columbia
@@ -1477,6 +1506,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 1875.0,2020-04-12,50.0,97.0,0.0,District of Columbia
 1955.0,2020-04-13,52.0,80.0,0.0,District of Columbia
 2058.0,2020-04-14,67.0,103.0,0.0,District of Columbia
+2197.0,2020-04-15,72.0,139.0,0.0,District of Columbia
 1.0,2020-03-08,0.0,,0.0,Kansas
 1.0,2020-03-09,0.0,0.0,0.0,Kansas
 1.0,2020-03-10,0.0,0.0,0.0,Kansas
@@ -1515,6 +1545,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 1344.0,2020-04-12,56.0,69.0,0.0,Kansas
 1390.0,2020-04-13,62.0,46.0,0.0,Kansas
 1441.0,2020-04-14,69.0,51.0,0.0,Kansas
+1504.0,2020-04-15,71.0,63.0,0.0,Kansas
 1.0,2020-03-08,0.0,,0.0,Missouri
 1.0,2020-03-09,0.0,0.0,0.0,Missouri
 1.0,2020-03-10,0.0,0.0,0.0,Missouri
@@ -1553,6 +1584,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 4269.0,2020-04-12,118.0,161.0,0.0,Missouri
 4515.0,2020-04-13,123.0,246.0,0.0,Missouri
 4746.0,2020-04-14,149.0,231.0,0.0,Missouri
+4791.0,2020-04-15,153.0,45.0,0.0,Missouri
 1.0,2020-03-08,0.0,,0.0,Vermont
 1.0,2020-03-09,0.0,0.0,0.0,Vermont
 1.0,2020-03-10,0.0,0.0,0.0,Vermont
@@ -1591,6 +1623,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 727.0,2020-04-12,27.0,16.0,0.0,Vermont
 748.0,2020-04-13,28.0,21.0,0.0,Vermont
 752.0,2020-04-14,29.0,4.0,0.0,Vermont
+759.0,2020-04-15,29.0,7.0,0.0,Vermont
 2.0,2020-03-08,0.0,,0.0,Virginia
 2.0,2020-03-09,0.0,0.0,0.0,Virginia
 7.0,2020-03-10,0.0,5.0,0.0,Virginia
@@ -1629,6 +1662,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 5274.0,2020-04-12,141.0,197.0,0.0,Virginia
 5747.0,2020-04-13,149.0,473.0,0.0,Virginia
 6182.0,2020-04-14,154.0,435.0,0.0,Virginia
+6500.0,2020-04-15,195.0,318.0,0.0,Virginia
 3.0,2020-03-09,0.0,,0.0,Iowa
 8.0,2020-03-10,0.0,5.0,0.0,Iowa
 13.0,2020-03-11,0.0,5.0,0.0,Iowa
@@ -1666,6 +1700,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 1587.0,2020-04-12,41.0,77.0,0.0,Iowa
 1710.0,2020-04-13,41.0,123.0,0.0,Iowa
 1899.0,2020-04-14,49.0,189.0,0.0,Iowa
+1995.0,2020-04-15,53.0,96.0,0.0,Iowa
 1.0,2020-03-09,0.0,,0.0,Louisiana
 1.0,2020-03-10,0.0,0.0,0.0,Louisiana
 6.0,2020-03-11,0.0,5.0,0.0,Louisiana
@@ -1703,6 +1738,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 20595.0,2020-04-12,840.0,581.0,0.0,Louisiana
 21016.0,2020-04-13,884.0,421.0,0.0,Louisiana
 21518.0,2020-04-14,1013.0,502.0,0.0,Louisiana
+21951.0,2020-04-15,1103.0,433.0,0.0,Louisiana
 0.0,2020-03-10,0.0,,0.0,Alaska
 0.0,2020-03-11,0.0,0.0,0.0,Alaska
 0.0,2020-03-12,0.0,0.0,0.0,Alaska
@@ -1738,6 +1774,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 272.0,2020-04-12,8.0,15.0,0.0,Alaska
 277.0,2020-04-13,8.0,5.0,0.0,Alaska
 285.0,2020-04-14,9.0,8.0,0.0,Alaska
+293.0,2020-04-15,9.0,8.0,0.0,Alaska
 0.0,2020-03-10,0.0,,0.0,Arkansas
 1.0,2020-03-11,0.0,1.0,0.0,Arkansas
 6.0,2020-03-12,0.0,5.0,0.0,Arkansas
@@ -1774,6 +1811,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 1280.0,2020-04-12,27.0,52.0,0.0,Arkansas
 1410.0,2020-04-13,29.0,130.0,0.0,Arkansas
 1498.0,2020-04-14,32.0,88.0,0.0,Arkansas
+1569.0,2020-04-15,33.0,71.0,0.0,Arkansas
 0.0,2020-03-10,0.0,,0.0,Delaware
 1.0,2020-03-11,0.0,1.0,0.0,Delaware
 1.0,2020-03-12,0.0,0.0,0.0,Delaware
@@ -1810,6 +1848,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 1625.0,2020-04-12,35.0,146.0,0.0,Delaware
 1758.0,2020-04-13,41.0,133.0,0.0,Delaware
 1926.0,2020-04-14,43.0,168.0,0.0,Delaware
+2014.0,2020-04-15,46.0,88.0,0.0,Delaware
 0.0,2020-03-10,0.0,,0.0,Idaho
 0.0,2020-03-11,0.0,0.0,0.0,Idaho
 0.0,2020-03-12,0.0,0.0,0.0,Idaho
@@ -1846,6 +1885,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 1407.0,2020-04-12,27.0,11.0,0.0,Idaho
 1426.0,2020-04-13,27.0,19.0,0.0,Idaho
 1464.0,2020-04-14,33.0,38.0,0.0,Idaho
+1473.0,2020-04-15,39.0,9.0,0.0,Idaho
 0.0,2020-03-10,0.0,,0.0,Maine
 0.0,2020-03-11,0.0,0.0,0.0,Maine
 0.0,2020-03-12,0.0,0.0,0.0,Maine
@@ -1882,6 +1922,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 633.0,2020-04-12,19.0,17.0,0.0,Maine
 698.0,2020-04-13,19.0,65.0,0.0,Maine
 735.0,2020-04-14,20.0,37.0,0.0,Maine
+770.0,2020-04-15,24.0,35.0,0.0,Maine
 0.0,2020-03-10,0.0,,0.0,Michigan
 2.0,2020-03-11,0.0,2.0,0.0,Michigan
 2.0,2020-03-12,0.0,0.0,0.0,Michigan
@@ -1918,6 +1959,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 24244.0,2020-04-12,1479.0,639.0,0.0,Michigan
 25635.0,2020-04-13,1602.0,1391.0,0.0,Michigan
 27001.0,2020-04-14,1768.0,1366.0,0.0,Michigan
+28059.0,2020-04-15,1921.0,1058.0,0.0,Michigan
 0.0,2020-03-10,0.0,,0.0,Mississippi
 0.0,2020-03-11,0.0,0.0,0.0,Mississippi
 1.0,2020-03-12,0.0,1.0,0.0,Mississippi
@@ -1954,6 +1996,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 2781.0,2020-04-12,96.0,139.0,0.0,Mississippi
 2942.0,2020-04-13,98.0,161.0,0.0,Mississippi
 3087.0,2020-04-14,111.0,145.0,0.0,Mississippi
+3360.0,2020-04-15,122.0,273.0,0.0,Mississippi
 0.0,2020-03-10,0.0,,0.0,Montana
 1.0,2020-03-11,0.0,1.0,0.0,Montana
 1.0,2020-03-12,0.0,0.0,0.0,Montana
@@ -1990,6 +2033,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 387.0,2020-04-12,6.0,10.0,0.0,Montana
 394.0,2020-04-13,7.0,7.0,0.0,Montana
 399.0,2020-04-14,7.0,5.0,0.0,Montana
+404.0,2020-04-15,7.0,5.0,0.0,Montana
 0.0,2020-03-10,0.0,,0.0,New Mexico
 3.0,2020-03-11,0.0,3.0,0.0,New Mexico
 5.0,2020-03-12,0.0,2.0,0.0,New Mexico
@@ -2026,6 +2070,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 1245.0,2020-04-12,26.0,154.0,0.0,New Mexico
 1262.0,2020-04-13,26.0,17.0,0.0,New Mexico
 1345.0,2020-04-14,31.0,83.0,0.0,New Mexico
+1484.0,2020-04-15,36.0,139.0,0.0,New Mexico
 0.0,2020-03-10,0.0,,0.0,North Dakota
 0.0,2020-03-11,0.0,0.0,0.0,North Dakota
 1.0,2020-03-12,0.0,1.0,0.0,North Dakota
@@ -2062,6 +2107,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 308.0,2020-04-12,7.0,15.0,0.0,North Dakota
 331.0,2020-04-13,8.0,23.0,0.0,North Dakota
 341.0,2020-04-14,8.0,10.0,0.0,North Dakota
+365.0,2020-04-15,9.0,24.0,0.0,North Dakota
 3.0,2020-03-10,0.0,,0.0,Ohio
 4.0,2020-03-11,0.0,1.0,0.0,Ohio
 5.0,2020-03-12,0.0,1.0,0.0,Ohio
@@ -2098,6 +2144,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 6604.0,2020-04-12,253.0,354.0,0.0,Ohio
 6975.0,2020-04-13,274.0,371.0,0.0,Ohio
 7285.0,2020-04-14,324.0,310.0,0.0,Ohio
+7794.0,2020-04-15,362.0,509.0,0.0,Ohio
 0.0,2020-03-10,0.0,,0.0,South Dakota
 8.0,2020-03-11,1.0,8.0,0.0,South Dakota
 8.0,2020-03-12,1.0,0.0,0.0,South Dakota
@@ -2134,6 +2181,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 730.0,2020-04-12,6.0,104.0,0.0,South Dakota
 868.0,2020-04-13,6.0,138.0,0.0,South Dakota
 988.0,2020-04-14,6.0,120.0,0.0,South Dakota
+1168.0,2020-04-15,6.0,180.0,0.0,South Dakota
 0.0,2020-03-10,0.0,,0.0,West Virginia
 0.0,2020-03-11,0.0,0.0,0.0,West Virginia
 0.0,2020-03-12,0.0,0.0,0.0,West Virginia
@@ -2170,6 +2218,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 593.0,2020-04-12,6.0,16.0,0.0,West Virginia
 611.0,2020-04-13,8.0,18.0,0.0,West Virginia
 640.0,2020-04-14,9.0,29.0,0.0,West Virginia
+702.0,2020-04-15,10.0,62.0,0.0,West Virginia
 0.0,2020-03-10,0.0,,0.0,Wyoming
 0.0,2020-03-11,0.0,0.0,0.0,Wyoming
 1.0,2020-03-12,0.0,1.0,0.0,Wyoming
@@ -2206,6 +2255,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 270.0,2020-04-12,0.0,9.0,0.0,Wyoming
 275.0,2020-04-13,1.0,5.0,0.0,Wyoming
 282.0,2020-04-14,1.0,7.0,0.0,Wyoming
+287.0,2020-04-15,1.0,5.0,0.0,Wyoming
 5.0,2020-03-13,0.0,,0.0,Alabama
 6.0,2020-03-14,0.0,1.0,0.0,Alabama
 12.0,2020-03-15,0.0,6.0,0.0,Alabama
@@ -2239,6 +2289,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 3563.0,2020-04-12,93.0,346.0,0.0,Alabama
 3734.0,2020-04-13,99.0,171.0,0.0,Alabama
 3953.0,2020-04-14,114.0,219.0,0.0,Alabama
+4075.0,2020-04-15,118.0,122.0,0.0,Alabama
 3.0,2020-03-14,0.0,,0.0,Puerto Rico
 5.0,2020-03-15,0.0,2.0,0.0,Puerto Rico
 5.0,2020-03-16,0.0,0.0,0.0,Puerto Rico
@@ -2271,6 +2322,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 897.0,2020-04-12,44.0,109.0,0.0,Puerto Rico
 903.0,2020-04-13,45.0,6.0,0.0,Puerto Rico
 923.0,2020-04-14,45.0,20.0,0.0,Puerto Rico
+974.0,2020-04-15,51.0,51.0,0.0,Puerto Rico
 3.0,2020-03-15,0.0,,0.0,Guam
 3.0,2020-03-16,0.0,0.0,0.0,Guam
 3.0,2020-03-17,0.0,0.0,0.0,Guam
@@ -2302,6 +2354,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 133.0,2020-04-12,5.0,0.0,0.0,Guam
 133.0,2020-04-13,5.0,0.0,0.0,Guam
 133.0,2020-04-14,5.0,0.0,0.0,Guam
+135.0,2020-04-15,5.0,2.0,0.0,Guam
 1.0,2020-03-16,0.0,,0.0,Virgin Islands
 2.0,2020-03-17,0.0,1.0,0.0,Virgin Islands
 2.0,2020-03-18,0.0,0.0,0.0,Virgin Islands
@@ -2330,6 +2383,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 51.0,2020-04-12,1.0,0.0,0.0,Virgin Islands
 51.0,2020-04-13,1.0,0.0,0.0,Virgin Islands
 51.0,2020-04-14,1.0,0.0,0.0,Virgin Islands
+51.0,2020-04-15,1.0,0.0,0.0,Virgin Islands
 1.0,2020-03-18,0.0,,106.0,US
 1.0,2020-03-19,0.0,0.0,108.0,US
 1.0,2020-03-20,0.0,0.0,147.0,US
@@ -2371,6 +2425,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 11.0,2020-04-12,2.0,0.0,0.0,Northern Mariana Islands
 11.0,2020-04-13,2.0,0.0,0.0,Northern Mariana Islands
 11.0,2020-04-14,2.0,0.0,0.0,Northern Mariana Islands
+13.0,2020-04-15,2.0,2.0,0.0,Northern Mariana Islands
 4.0,2020-03-22,0.0,,0.0,Wuhan Evacuee
 4.0,2020-03-23,0.0,0.0,0.0,Wuhan Evacuee
 4.0,2020-03-24,0.0,0.0,0.0,Wuhan Evacuee
@@ -2396,3 +2451,4 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 0.0,2020-04-12,0.0,0.0,32988.0,Recovered
 0.0,2020-04-13,0.0,0.0,43482.0,Recovered
 0.0,2020-04-14,0.0,0.0,47763.0,Recovered
+0.0,2020-04-15,0.0,0.0,52096.0,Recovered
