@@ -998,7 +998,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 121040.0,2020-08-09,8735.0,329.0,0.0,Massachusetts
 121315.0,2020-08-10,8741.0,275.0,0.0,Massachusetts
 121707.0,2020-08-11,8751.0,392.0,0.0,Massachusetts
-121707.0,2020-08-12,8751.0,0.0,0.0,Massachusetts
+122000.0,2020-08-12,8769.0,293.0,0.0,Massachusetts
 1.0,2020-02-05,0.0,,0.0,Wisconsin
 1.0,2020-02-06,0.0,0.0,0.0,Wisconsin
 1.0,2020-02-07,0.0,0.0,0.0,Wisconsin
@@ -2680,7 +2680,7 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 136346.0,2020-08-09,2192.0,1398.0,0.0,North Carolina
 137562.0,2020-08-10,2199.0,1216.0,0.0,North Carolina
 138743.0,2020-08-11,2238.0,1181.0,0.0,North Carolina
-139739.0,2020-08-12,2290.0,996.0,0.0,North Carolina
+139739.0,2020-08-12,2280.0,996.0,0.0,North Carolina
 1.0,2020-03-05,0.0,,0.0,Nevada
 2.0,2020-03-06,0.0,1.0,0.0,Nevada
 2.0,2020-03-07,0.0,0.0,0.0,Nevada
