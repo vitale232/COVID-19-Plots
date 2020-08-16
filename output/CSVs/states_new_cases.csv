@@ -1007,8 +1007,8 @@ Confirmed,Date,Deaths,NewCases,Recovered,State
 121315.0,2020-08-10,8741.0,275.0,0.0,Massachusetts
 121707.0,2020-08-11,8751.0,392.0,0.0,Massachusetts
 122000.0,2020-08-12,8769.0,293.0,0.0,Massachusetts
-122319.0,2020-08-13,8790.0,319.0,0.0,Massachusetts
-122531.0,2020-08-14,8804.0,212.0,0.0,Massachusetts
+122423.0,2020-08-13,8790.0,423.0,0.0,Massachusetts
+122728.0,2020-08-14,8810.0,305.0,0.0,Massachusetts
 1.0,2020-02-05,0.0,,0.0,Wisconsin
 1.0,2020-02-06,0.0,0.0,0.0,Wisconsin
 1.0,2020-02-07,0.0,0.0,0.0,Wisconsin
